@@ -1,0 +1,277 @@
+body {
+    /* background-color: rgba(10, 25, 47, 0.85); */
+    background-color: #0a192f;
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+code {
+    border: 1px solid;
+}
+
+canvas {
+    border: 1px solid black;
+}
+
+#display-bar {
+    background-color: #0a192f;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    justify-content: space-between;
+    align-content: flex-end;
+    margin-left: 10rem;
+}
+
+.menu-bar {
+    color: #64ffda;
+}
+
+/* li {
+            color: #64ffda;
+        }  */
+
+.resume-button {
+    color: #64ffda;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    padding: 0.75rem 1rem;
+    font-family: font-mono;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+header div {
+    margin: 1rem 0.5rem 0 0;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+a[href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if"] {
+    color: #64ffda;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.sublink {
+    color: #CCD6F6;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.sublink:hover {
+    text-decoration: underline;
+    box-shadow: 0 4px 8px #64ffda;
+}
+
+.sublink:active {
+    color: #64ffda;
+}
+
+.link {
+    transition: box-shadow 0.3s ease;
+}
+
+.link:hover {
+    box-shadow: 0 4px 8px #64ffda;
+}
+
+.first-menu-bar {
+    display: inline-block;
+    color: #CCD6F6;
+    text-decoration: none;
+}
+
+.first-menu-bar:hover {
+    text-decoration: underline;
+}
+
+.first-menu-bar:active {
+    color: #64ffda;
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    /* position: absolute; */
+    /* background-color: #132e56; */
+    padding: 12px 16px;
+    z-index: 1;
+    opacity: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#About-section {
+    margin-right: 7rem;
+}
+
+#Experience-section {
+    margin-right: 6.5rem;
+}
+
+#Project-section {
+    margin-right: 3.5rem;
+}
+
+#dropdown-menu-display {
+    margin-left: 8rem;
+    /* margin-right: 20rem; */
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    background-color: #172a45;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.ask-name {
+    color: #64ffda;
+    font-size: 20px;
+    margin: 1rem 0 1rem 0;
+}
+
+.big-name {
+    line-height: 1.1;
+    font-weight: 600;
+    color: #CCD6F6;
+    font-size: 40px;
+    margin: 1rem 0 1rem 0;
+}
+
+.self-intro {
+    color: #CCD6F6;
+}
+
+.Description-of-my-self {
+    background-color: #0a192f;
+}
+
+h2 {
+    color: #CCD6F6;
+    font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text";
+}
+
+summary {
+    color: #CCD6F6;
+}
+
+section h2 {
+    display: inline;
+}
+
+.h2 {
+    color: #64ffda;
+}
+
+.background-image {
+    background-image: url("1.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    height: 40rem;
+    width: 60rem;
+    /* justify-content: space-between;
+            align-content: flex-end; */
+    /* height: 75rem;
+            width: 100%; */
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    background-color: #0a192f;
+    color: #FFFFFF;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-out;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+    transform: translateY(3px);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #CCD6F6;
+}
+
+.company {
+    color: #64ffda;
+    text-decoration: none;
+}
+
+.company:hover {
+    text-decoration: underline;
+}
+
+.company:active {
+    color: #1faf8e;
+}
+
+li {
+    color: #CCD6F6;
+}
+
+p {
+    color: #CCD6F6;
+}
+
+.footer {
+    color: #CCD6F6;
+    text-decoration: none;
+}
+
+h1 {
+    color: #CCD6F6;
+}
+
+/* .cat {
+    margin-top: 2rem;
+    transform: rotate(0.1turn);
+    border-radius: 50%;
+    animation-name: animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+} */
+
+/* @keyframes animation {
+    0% {
+        width: 5rem;
+        height: 10rem;
+    }
+
+    100% {
+        width: 30rem;
+        height: 30rem;
+    }
+} */
+
+/* .transition {
+    transition: background-color 1.5s ease-in-out;
+    width: 20rem;
+    height: 20rem;
+    background-color: #64ffda;
+}
+
+.transition:hover {
+    width: 20rem;
+    height: 20rem;
+    background-color: #1faf8e;
+} */

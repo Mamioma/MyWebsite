@@ -7,253 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>a quick &copy; start</title>
     <link rel="stylesheet" href="app.css">
-    <style>
-        body {
-            /* background-color: rgba(10, 25, 47, 0.85); */
-            background-color: #0a192f;
-            margin-left: 20rem;
-            margin-right: 20rem;
-        }
-
-        code {
-            border: 1px solid;
-        }
-
-        canvas {
-            border: 1px solid black;
-        }
-
-        #display-bar {
-            background-color: #0a192f;
-            display: flex;
-            flex-direction: row;
-            height: 50px;
-            justify-content: space-between;
-            align-content: flex-end;
-        }
-
-        .menu-bar {
-            color: #64ffda;
-        }
-
-        .link {
-            color: #CCD6F6;
-            text-decoration: none;
-        }
-
-        .link:hover {
-            text-decoration: underline;
-        }
-
-        .link:active {
-            color: #64ffda;
-        }
-
-        /* li {
-            color: #64ffda;
-        }  */
-
-        .resume-button {
-            color: #64ffda;
-            background-color: transparent;
-            border: 1px solid #64ffda;
-            ;
-            padding: 0.75rem 1rem;
-            font-family: font-mono;
-            line-height: 1;
-            text-decoration: none;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-
-        header div {
-            margin: 1rem 0.5rem 0 0;
-        }
-
-        #first-menu-bar {
-            margin-left: 20rem;
-        }
-
-        .ask-name {
-            color: #64ffda;
-            font-size: 20px;
-            margin: 1rem 0 1rem 0;
-        }
-
-        .big-name {
-            line-height: 1.1;
-            font-weight: 600;
-            color:  #CCD6F6;
-            font-size: 40px;
-            margin: 1rem 0 1rem 0;
-        }
-
-        .self-intro {
-            color: #CCD6F6;
-        }
-
-        .Description-of-my-self {
-            background-color: #0a192f;
-        }
-
-        h2 {
-            color: #CCD6F6;
-            font-family: "Calibre","Inter","San Francisco","SF Pro Text";
-        }
-
-        summary {
-            color: #CCD6F6;
-        }
-
-        section h2{
-            display: inline;
-        }
-
-        .h2 {
-            color: #64ffda;
-        }
-
-        .background-image {
-            background-image: url("1.png");
-            background-size: cover;
-            display: flex;
-            flex-direction: row;
-            height: 40rem;
-            width: 60rem;
-            /* justify-content: space-between;
-            align-content: flex-end; */
-            /* height: 75rem;
-            width: 100%; */
-        }
-
-        button {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50px;
-            background-color: #0a192f;
-            color: #FFFFFF;
-            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.2s ease-out;
-        }
-
-        button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        button:active {
-            transform: translateY(3px);
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        h3 {
-            color: #CCD6F6;
-        }
-
-        .company {
-            color: #64ffda;
-            text-decoration: none;
-        }
-
-        .company:hover {
-            text-decoration: underline;
-        }
-
-        .company:active {
-            color: #1faf8e;
-        }
-
-        li {
-            color: #CCD6F6;
-        }
-
-        p {
-            color: #CCD6F6;
-        }
-
-        .footer {
-            color:  #CCD6F6;
-            text-decoration: none;
-        }
-
-        h1 {
-            color:  #CCD6F6;
-        }
-
-        /* .cat {
-            margin-top: 2rem;
-            transform: rotate(0.1turn);
-            border-radius: 50%;
-            animation-name: animation;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-        } */
-
-        /* @keyframes animation {
-            0% {
-                width: 5rem;
-                height: 10rem;
-            }
-
-            100% {
-                width: 30rem;
-                height: 30rem;
-            }
-        } */
-
-        /* .transition {
-            transition: background-color 1.5s ease-in-out;
-            width: 20rem;
-            height: 20rem;
-            background-color: #64ffda;
-        }
-
-        .transition:hover {
-            width: 20rem;
-            height: 20rem;
-            background-color: #1faf8e;
-        } */
-    </style>
-    <script>
-        function draw() {
-            const canvas = document.getElementById("tutorial")
-            if (canvas.getContext) {
-                const ctx = canvas.getContext("2d")
-
-                ctx.fillStyle = "rgb(200, 0, 0)"
-                ctx.fillRect(10, 10, 50, 50)
-                ctx.fillStyle = "rgb(0, 0, 200, 0.5)"
-                ctx.fillRect(30, 30, 50, 50)
-
-            }
-
-        }
-    </script>
 </head>
 
-<body onload="draw();">
+<body>
     <header>
         <div id="display-bar">
-            <div id="first-menu-bar">
-                <a class="link" href="https://gleaming-seahorse-b1b0ce.netlify.app/">About</a>
+            <div class="first-menu-bar">
+                <a class="link">About</a>
             </div>
-            <div>
-                <a class="link" href="https://gleaming-seahorse-b1b0ce.netlify.app/">Experience</a>
+            <div class="first-menu-bar">
+                <a class="link">Experience</a>
             </div>
-            <div>
-                <a class="link" href="https://gleaming-seahorse-b1b0ce.netlify.app/">Work</a>
+            <div class="first-menu-bar">
+                <a class="link">Project</a>
             </div>
-            <div>
-                <a class="link" href="https://gleaming-seahorse-b1b0ce.netlify.app/">Contact</a>
+            <div class="first-menu-bar">
+                <a class="link">Contact</a>
             </div>
             <div id="resume">
                 <a class="resume-button" href="./resume.pdf">Resume</a>
             </div>
         </div>
+        <nav id="dropdown-menu-display">
+            <nav class="dropdown-menu">
+                <nav id="About-section">
+                    <li><a class="sublink" href="#" data-target="my-profolio">My profolio</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Experience-section">
+                    <li><a class="sublink" href="#" data-target="Adobe-intro">Adobe</a></li>
+                    <li><a class="sublink" href="#" data-target="Lenovo-intro">Lenovo</a></li>
+                    <li><a class="sublink" href="#" data-target="Amazon-intro">Amazon</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Project-section">
+                    <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a></li>
+                    <li><a class="sublink" href="#" data-target="Active-Learning">Active Learning</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Contact-section">
+                    <li><a class="sublink" href="#" data-target="my-ins">My Instagram</a></li>
+                </nav>
+            </nav>
+        </nav>
     </header>
     <div id="content">
         <section class="Description-of-my-self">
@@ -275,7 +74,7 @@
             <h2><em>About Me</em></h2>
             <div class="section2_inner">
                 <div class="section2_intro">
-                    <details>
+                    <details id="my-profolio">
                         <summary>Click to unlock</summary>
                         <div class="background-image">
                         </div>
@@ -301,7 +100,7 @@
                 </div>
             </aside>
             <div class="Job Description">
-                <nav class="Adobe intro">
+                <nav id="Adobe-intro">
                     <h3>
                         <span>Software Enginee Intern</span>
                         <span class="company"></span>
@@ -317,7 +116,7 @@
                 </nav>
             </div>
             <div class="Job Description">
-                <nav class="Amazon intro">
+                <nav id="Amazon-intro">
                     <h3>
                         <span>Software Enginee Intern</span>
                         <span class="company"></span>
@@ -354,7 +153,7 @@
                 </nav>
             </div>
             <div class="Job Description">
-                <nav class="Lenovo intro">
+                <nav id="Lenovo-intro">
                     <h3>
                         <span>Data Enginee Intern</span>
                         <span class="company"></span>
@@ -388,7 +187,7 @@
         <section id="projects">
             <h2><i>Some Things I've Build</i></h2>
             <div>
-                <h3>Operating System Implementation</h3>
+                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
                 <details>
                     <summary>click to unlock</summary>
                     <div>
@@ -416,7 +215,7 @@
             </div>
 
             <div>
-                <h3>Active Learning for data limited classification task</h3>
+                <h3 id="Active-Learning">Active Learning for data limited classification task</h3>
                 <details>
                     <summary>click to unlock</summary>
                     <div>
@@ -442,7 +241,7 @@
 
         </section>
     </div>
-    <h1>my current ins</h1>
+    <h1 id="my-ins">my current ins</h1>
     <blockquote class="instagram-media" data-instgrm-captioned
         data-instgrm-permalink="https://www.instagram.com/p/CoJpDg9uosH/?utm_source=ig_embed&amp;utm_campaign=loading"
         data-instgrm-version="14"
@@ -546,6 +345,7 @@
     <!-- <img src="download.jpeg" alt="a cat with flower" class="cat">
 
     <div class="transition">transition</div> -->
+    <script src="script.js"></script>
 
 </body>
 
