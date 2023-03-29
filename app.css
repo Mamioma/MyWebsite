@@ -64,6 +64,7 @@ a:hover {
     color: #CCD6F6;
     text-decoration: none;
     transition: box-shadow 0.3s ease;
+    margin-top: 1rem;
 }
 
 .sublink:hover {
