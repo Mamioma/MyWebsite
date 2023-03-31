@@ -43,11 +43,26 @@ document.addEventListener("DOMContentLoaded", function () {
                     // Open the details tag if it's not already open
                     console.log("enter");
                     const detailsTag = targetSection.closest("details");
-                    if (detailsTag && !detailsTag.opem) {
+                    if (detailsTag && !detailsTag.open) {
                         detailsTag.open = true;
                     }
                     targetSection.scrollIntoView({ behavior: "smooth" });
                 }
+
+                const children = targetSection.children;
+
+                for (let i = 0; i < children.length; i++) {
+                    if (children[i].tagName.toLowerCase() === 'details') {
+                        children[i].open = true;
+                        break;
+                    }
+                }
+
+                const sibiling = targetSection.nextElementSibling;
+                if (sibiling.tagName.toLowerCase() === 'details') {
+                    sibiling.open = true;
+                }
+
             });
         });
     });
