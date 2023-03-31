@@ -44,6 +44,7 @@
             <nav class="dropdown-menu">
                 <nav id="Project-section">
                     <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a></li>
+                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Network Project</a></li>
                     <li><a class="sublink" href="#" data-target="Active-Learning">Active Learning</a></li>
                 </nav>
             </nav>
@@ -83,8 +84,157 @@
             </div>
         </section>
         <hr>
-        <section id="jobs">
+        <section id="projects">
             <h2 class="h2">2.&nbsp;</h2>
+            <h2><i>Some Things I've Build</i></h2>
+            <div>
+                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
+                <details>
+                    <summary>click to unlock</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                Implementing internal structures of the operating system: Alarm() function
+                                to call timer interrupt; Join() function to
+                                sleep the parent while waiting for the child thread to finish;
+                                Implement <b>semaphores</b> to provide atomicity;
+                            </li>
+                            <li>
+                                create the pageTable data structure for each user process,
+                                which maps the process's <b>virtual addresses</b> to <b>physical addresses</b>.
+                            </li>
+                            <li>
+                                Implementing the file system calls create, open, read, write, close, unlink, join, exit and
+                                exec.
+                            </li>
+                            <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
+                                to handle page
+                                faults</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        
+            <div>
+                <h3 id="Graduate-Network-Implementation">Network Course Project</h3>
+                <details>
+                    <summary>click to unlock</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                Implementing the http protocol (simple version):
+                                <div class="image-container">
+                                    <ul>
+                                        <li>
+                                            Clients send request messages to the server,
+                                            and servers reply with response messages layered on top of the <b>TCP</b>
+                                            protocol.
+                                        </li>
+                                        <li>
+                                            Implemented <b>HTTP persistent connection</b>:
+                                            a client can reuse a TCP connection to a given server
+                                        </li>
+                                        <li>
+                                            Provide <b>safe control</b> not allowing clients to access memory other than
+                                            document root.
+                                        </li>
+                                    </ul>
+                                    <img src="httpPersistent.png" alt="client-server http protocol" class="centered-image" />
+                                </div>
+                            </li>
+                            <li>
+                                creating a <b>fault tolerant cloud-based file storage service</b> called SurfStore (client and
+                                server communicating using
+                                <b>gRPC</b>):
+                                <ul>
+                                    <li>
+                                        The SurfStore service is composed of the following two services:
+                                    </li>
+                                    <div class="image-container2">
+                                        <ul>
+                                            <li>
+                                                BlockStore: Stores these <b>blocks</b>, and when given an identifier, retrieves
+                                                and returns the appropriate block.
+                                            </li>
+                                            <li>
+                                                MetaStore: Manages the metadata of files and mapping of filenames to blocks
+                                                (hash marshalled by <b>SHA-256</b>).
+                                            </li>
+                                            <img src="surfStore.png" alt="Basic idea of surfStore" class="centered-image2" />
+                                        </ul>
+                                    </div>
+                                    <div class="image-container2">
+                                        <li>
+                                            The clients' file data is stored in local database with <b>version</b>. When
+                                            invoking into client, the sync
+                                            operation will
+                                            occur, and
+                                            new files added to base directory will be uploaded to the cloud, files that were
+                                            sync'd to the cloud from other
+                                            clients
+                                            will be downloaded to base directory, and any files which have ''edit conflicts''
+                                            will be resolved.
+                                        </li>
+                                        <img src="version.png" alt="SurfStore version control" class="centered-image2" />
+                                    </div>
+                                    <li>
+                                        Store and manage the block in different BlockStore using <b>Consistent Hashing Ring</b>.
+                                    </li>
+                                    <div class="image-container3">
+                                        <div class="sub-class3">
+                                            <img src="ConsistentHashing.png" alt="Consistent Hashing Ring"
+                                                class="centered-image3" />
+                                            <img src="Akamai.png" alt="Akamai paper" class="centered-image3" />
+                                        </div>
+                                    </div>
+                                    <div class="image-container3">
+                                        <li>
+                                            Ensure that the MetaStore is fault tolerant and stays consistent regardless of
+                                            minority of server failures by
+                                            <b>RAFT</b>
+                                            protocol. (<a href="https://raft.github.io/raftscope/index.html">Raft Simulator</a>)
+                                        </li>
+                                        <div class="sub-class3">
+                                            <img src="RAFT.png" alt="Raft protocol" class="centered-image3" />
+                                            <img src="RAFT2.png" alt="Raft visulization" class="centered-image3" />
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        
+            <div>
+                <h3 id="Active-Learning">Active Learning for data limited classification task</h3>
+                <details>
+                    <summary>click to unlock</summary>
+                    <div>
+                        <ul>
+                            <li>Applied <b>active learning</b> to the classification task of malaria cells</li>
+                            <li>Used only 26% of the data to achieve comparable accuracy close to the 100% of data usage
+                                in other literature
+                                by applying
+                                <b>uncertainty sampling</b>.
+                            </li>
+                            <li>Explored who has a higher improvement effect on <b>model generalization</b> by comparing
+                                <b>random
+                                    sampling</b>> with uncertainty
+                                sampling and <b>Logistic Regression</b> with <b>SVM</b>.
+                            </li>
+                            <li>Paper accepted by the <b>2021 IEEE 3rd International Conference on Frontiers Technology
+                                    of Information and
+                                    Computer</b>.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        
+        </section>
+        <hr>
+        <section id="jobs">
+            <h2 class="h2">3.&nbsp;</h2>
             <h2><em>Where I've Worke</em></h2>
             <aside>
                 <div class="tablelist">
@@ -128,21 +278,14 @@
                         <summary>click to unlock</summary>
                         <div>
                             <ul>
-                                <li>Implementing deep learning combined with the Unsharp algorithm, which outperforms
-                                    tablet camera's algorithm
-                                    on MTF-50.(MTF-50 is higher means the sharpness of the image is increased.)</li>
-                                <li>Controlling the imaging device by adb to generate an identical image with the image
-                                    sharpening function
-                                    turned on and
-                                    off in the amazon lab. In this way is able to compare the performance of our
-                                    algorithm vs the camera's
-                                    algorithm on the same image.</li>
-                                <li>Able to control the sharpness of the model either manually or by the model
-                                    itself.(user-friendly).</li>
-                                <li>Realized classical methods like Sobel, Canny operator, Unsharp algorithm and tested
-                                    in amazon lab using
-                                    Imatest
-                                    software.</li>
+                                <li>Developed an image processing system that combines deep learning techniques with the Unsharp algorithm,
+                                     achieving lower sharpness results compared to the camera algorithm used in tablets.
+                                      And evaluated the performance of the system using <b>MTF-50</b></li>
+                                <li>Demonstrated ability to compare the performance of algorithms by controlling the imaging device with <b>adb</b> and generating
+                                identical images with different image sharpening settings in the Amazon lab.</li>
+                                <li>Developed a user-friendly model for controlling sharpness manually or automatically.</li>
+                                <li>Tested classical image processing methods including <b>Sobel</b>, <b>Canny</b> operator, and <b>Unsharp</b> algorithm using <b>Imatest</b> software
+                                in the Amazon lab.</li>
                                 <li>Link on my
                                     <a
                                         href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if">doc</a>
@@ -163,82 +306,29 @@
                     <p>November 2021 - Febuary 2022</p>
                     <details>
                         <summary>click to unlock</summary>
-                        <div>
+                        <div class="image-container3">
                             <ul>
-                                <li>Predicted the future sales of Lenovo's notebook products and tablets based on time
-                                    series forecast according
-                                    to Lenovo's
-                                    previous sales data and some other data companies like IDC, GFK, etc.</li>
-                                <li>Implemented machine learning algorithms like Prophet and deep learning models like
-                                    LSTM or GRU, which
-                                    increased 1.2%
-                                    accuracy of the model.</li>
-                                <li>Used Optuna to make hyperparameter adjustments to the project's existing code, which
-                                    saved a large amount of
-                                    time
-                                    compared with the raditional grid search method.</li>
+                                <li>Conducted time series forecasting to predict future sales of Lenovo's notebook products and tablets, utilizing Lenovo's
+                                historical sales data as well as data from other companies such as <b>IDC</b> and <b>GFK</b>.</li>
+                                <li>Increased the forecasting accuracy of the model by <b>1.2%</b> by implementing machine learning algorithms such as <b>Prophet</b> and
+                                deep learning models like <b>LSTM</b> or <b>GRU</b>.</li>
+                                <li>Used <b>Optuna</b> to make <b>hyperparameter adjustments</b> to the project's existing code, which
+                                    saved a large amount of time compared with the raditional <b>grid search</b> method.</li>
                             </ul>
+                            <div class="sub-class4">
+                                <div class="sub-class41">
+                                    <img src="hyperparameter.png" alt="problems of NAS" class="centered-image4" />
+                                    <img src="optuna.png" alt="Optuna" class="centered-image4" />
+                                </div>
+                                <div class="sub-class41">
+                                    <img src="importance.png" alt="Important parameter" class="centered-image4" />
+                                    <img src="search.png" alt="Important parameter" class="centered-image4" />
+                                </div>
+                            </div>
                         </div>
                     </details>
                 </nav>
             </div>
-        </section>
-        <hr>
-        <section id="projects">
-            <h2><i>Some Things I've Build</i></h2>
-            <div>
-                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
-                <details>
-                    <summary>click to unlock</summary>
-                    <div>
-                        <ul>
-                            <li>Implementing internal structures of the operating system: Alarm() function
-                                to call timer
-                                interrupt; Join() function to
-                                sleep the parent while waiting for the child thread to finish; Using Condition Variables
-                                and <b>mutex
-                                    locks</b> to provide atomicity;</li>
-                            <li>Solving <strong>concurrency</strong> problems like exchanging values using Condition
-                                Variables and <b>mutex
-                                    locks</b> on <b>multi-thread programs</b>.</li>
-                            <li>Implementing the file system calls create, open, read, write, close, unlink, join, exit
-                                and exec.</li>
-                            <li>manage the allocation of pages of physical memory so that different processes do not
-                                overlap in their memory
-                                usage.</li>
-                            <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
-                                to handle page
-                                faults</li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
-
-            <div>
-                <h3 id="Active-Learning">Active Learning for data limited classification task</h3>
-                <details>
-                    <summary>click to unlock</summary>
-                    <div>
-                        <ul>
-                            <li>Applied <b>active learning</b> to the classification task of malaria cells</li>
-                            <li>Used only 26% of the data to achieve comparable accuracy close to the 100% of data usage
-                                in other literature
-                                by applying
-                                <b>uncertainty sampling</b>.
-                            </li>
-                            <li>Explored who has a higher improvement effect on <b>model generalization</b> by comparing
-                                <b>random
-                                    sampling</b>> with uncertainty
-                                sampling and <b>Logistic Regression</b> with <b>SVM</b>.
-                            </li>
-                            <li>Paper accepted by the <b>2021 IEEE 3rd International Conference on Frontiers Technology
-                                    of Information and
-                                    Computer</b>.</li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
-
         </section>
     </div>
     <h1 id="my-ins">my current ins</h1>

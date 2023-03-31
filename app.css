@@ -56,6 +56,11 @@ a[href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El
     text-decoration: underline;
 }
 
+a[href="https://raft.github.io/raftscope/index.html"] {
+    color: #64ffda;
+    text-decoration: underline;
+}
+
 a:hover {
     text-decoration: none;
 }
@@ -241,6 +246,91 @@ p {
 
 h1 {
     color: #CCD6F6;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* You can adjust this according to your needs */
+    height: 100%;
+    /* You can adjust this according to your needs */
+}
+
+.centered-image {
+    position: relative;
+    width: 30%;
+    /* Adjust this to set the image width */
+    height: auto;
+    /* This maintains the aspect ratio of the image */
+}
+
+.image-container2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* You can adjust this according to your needs */
+    height: 100%;
+    /* You can adjust this according to your needs */
+}
+
+.centered-image2 {
+    position: relative;
+    width: 80%;
+    /* Adjust this to set the image width */
+    height: auto;
+    /* This maintains the aspect ratio of the image */
+}
+
+.image-container3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    /* You can adjust this according to your needs */
+    height: 100%;
+    /* You can adjust this according to your needs */
+}
+
+.centered-image3 {
+    position: relative;
+    width: 50%;
+    /* Adjust this to set the image width */
+    height: auto;
+    /* This maintains the aspect ratio of the image */
+}
+
+.sub-class3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sub-class4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centered-image4 {
+    position: relative;
+    width: 50%;
+    /* Adjust this to set the image width */
+    height: auto;
+    /* This maintains the aspect ratio of the image */
+}
+
+.sub-class41 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* .cat {
