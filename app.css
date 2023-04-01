@@ -107,12 +107,13 @@
             transition: all 0.3s ease;
         }
     
-        #About-section {
+        /* #About-section {
             margin-left: -1rem;
-        }
+        } */
     
         #Experience-section {
             margin-right: 1rem;
+            margin-left: -1rem;
         }
     
         /* #Project-section {
