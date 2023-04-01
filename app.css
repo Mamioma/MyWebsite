@@ -107,7 +107,7 @@
             transition: all 0.3s ease;
         }
     
-        #About-section {
+        /* #About-section {
             margin-right: 7rem;
         }
     
@@ -117,7 +117,7 @@
     
         #Project-section {
             margin-right: 3.5rem;
-        }
+        } */
     
         #dropdown-menu-display {
             margin-left: 1rem;
@@ -275,7 +275,7 @@
     
         .centered-image2 {
             position: relative;
-            width: 80%;
+            width: 100%;
             /* Adjust this to set the image width */
             height: auto;
             /* This maintains the aspect ratio of the image */
@@ -295,7 +295,7 @@
     
         .centered-image3 {
             position: relative;
-            width: 60%;
+            width: 100%;
             /* Adjust this to set the image width */
             height: auto;
             /* This maintains the aspect ratio of the image */
@@ -315,7 +315,7 @@
     
         .centered-image4 {
             position: relative;
-            width: 60%;
+            width: 100%;
             /* Adjust this to set the image width */
             height: auto;
             /* This maintains the aspect ratio of the image */
