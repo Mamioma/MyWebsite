@@ -1,4 +1,4 @@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 7670px) {
     body {
             /* background-color: rgba(10, 25, 47, 0.85); */
             background-color: #0a192f;
@@ -329,7 +329,7 @@
 }
 
 /* PC */
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 9920px) {
     body {
             /* background-color: rgba(10, 25, 47, 0.85); */
             background-color: #0a192f;
