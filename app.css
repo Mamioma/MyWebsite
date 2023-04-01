@@ -117,7 +117,7 @@
         }
     
         #Project-section {
-            margin-left: -1rem;
+            margin-left: -2rem;
         }
     
         #dropdown-menu-display {
@@ -176,8 +176,8 @@
             background-size: cover;
             display: flex;
             flex-direction: row;
-            height: 40rem;
-            width: 60rem;
+            height: 10rem;
+            width: 15rem;
             /* justify-content: space-between;
                     align-content: flex-end; */
             /* height: 75rem;
