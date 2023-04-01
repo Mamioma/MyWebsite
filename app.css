@@ -107,9 +107,9 @@
             transition: all 0.3s ease;
         }
     
-        /* #About-section {
-            margin-right: 7rem;
-        }*/
+        #About-section {
+            margin-left: -1rem;
+        }
     
         #Experience-section {
             margin-right: 1rem;
