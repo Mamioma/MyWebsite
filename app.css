@@ -116,9 +116,9 @@
             margin-left: -1rem;
         }
     
-        /* #Project-section {
-            margin-right: 3.5rem;
-        } */
+        #Project-section {
+            margin-left: -1rem;
+        }
     
         #dropdown-menu-display {
             margin-left: 1rem;
