@@ -67,4 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    let myLink = document.getElementById("MyName");
+    myLink.addEventListener("mouseenter", function() {
+        const textColor = "#64ffda";
+        const textContent = "Oh! You find my Linkedin!!";
+        myLink.innerHTML = `<strong style="color: ${textColor};">${textContent}</strong>`;
+    });
+
+    myLink.addEventListener("mouseleave", function () {
+        const textColor = "#CCD6F6";
+        const textContent = "Mingyong Ma";
+        myLink.innerHTML = `<strong style="color: ${textColor};">${textContent}</strong>`;
+    });
 });
