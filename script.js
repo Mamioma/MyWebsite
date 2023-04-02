@@ -68,15 +68,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     let myLink = document.getElementById("MyName");
+    let enterCount = 0;
     myLink.addEventListener("mouseenter", function() {
-        const textColor = "#64ffda";
-        const textContent = "Oh! You find my Linkedin!!";
-        myLink.innerHTML = `<strong style="color: ${textColor};">${textContent}</strong>`;
+        console.log("enter");
+        if (enterCount == 0) {
+            const textColor = "#64ffda";
+            const textContent = "Oh! You find my Linkedin!!";
+            myLink.innerHTML = `<a href="https://www.linkedin.com/in/mamioma" style="color: ${textColor};">${textContent}</a>`;
+            enterCount++;
+        }
     });
 
     myLink.addEventListener("mouseleave", function () {
-        const textColor = "#CCD6F6";
-        const textContent = "Mingyong Ma";
-        myLink.innerHTML = `<strong style="color: ${textColor};">${textContent}</strong>`;
+        console.log("leave");
+        if (enterCount == 1) {
+            const textColor = "#CCD6F6";
+            const textContent = "Mingyong Ma";
+            myLink.innerHTML = `<strong style="color: ${textColor};">${textContent}</strong>`;
+            enterCount--;
+        }
     });
 });

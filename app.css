@@ -570,6 +570,10 @@
             color: #CCD6F6;
             text-decoration: none;
         }
+
+        #MyName {
+            font-weight: bold;
+        }
     
         h1 {
             color: #CCD6F6;
