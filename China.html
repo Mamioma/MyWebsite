@@ -10,107 +10,50 @@
 </head>
 
 <body>
-    <script>
-        fetch('https://api.ipgeolocation.io/ipgeo?apiKey=93fa07c34c4847c6a45ec1f6272388a2')
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
-                    // Here you can handle the location data and display different content based on it
-                    // For example:
-                    const country = data.country_name;
-
-                    if (country === 'United States') {
-                        window.location.href = '/US.html';
-                    } else if (country === 'China') {
-                        window.location.href = '/China.html';
-                    } else {
-                        const ipSwitch = document.getElementById("switch-ip");
-                        const scrollBar = document.getElementById("scroll-bar");
-                        ipSwitch.innerText = "Cannot get your location through ip, which language you wanna choose: "
-
-                        // Create the select element
-                        const selectElement = document.createElement("select");
-                        selectElement.id = "selectOption";
-
-                        // Create the option elements
-                        const optionQuery = document.createElement("option");
-                        optionQuery.value = "Query";
-                        optionQuery.textContent = "options:";
-
-                        const option1 = document.createElement("option");
-                        option1.value = "English";
-                        option1.textContent = "English";
-
-                        const option2 = document.createElement("option");
-                        option2.value = "Chinese";
-                        option2.textContent = "中文";
-
-                        // Append the option elements to the select element
-                        selectElement.appendChild(optionQuery);
-                        selectElement.appendChild(option1);
-                        selectElement.appendChild(option2);
-
-                        // Append the select element to the div element
-                        scrollBar.appendChild(selectElement);
-
-                        selectElement.addEventListener("change", function () {
-                            // Get the selected value
-                            const selectedValue = selectElement.value;
-                            console.log(selectedValue);
-                            // Perform actions based on the selected value
-                            if (selectedValue === "Chinese") {
-                                // Action for Option 1
-                                window.location.href = '/China.html';
-                            } else {
-                                window.location.href = '/US.html';
-                            }
-                        });
-                    }
-                })
-                .catch(console.error);
-    </script>
     <header>
         <div id="display-bar">
             <div class="first-menu-bar">
-                <a class="link">About</a>
+                <a class="link">关于我</a>
             </div>
             <div class="first-menu-bar">
-                <a class="link">Experience</a>
+                <a class="link">实习经历</a>
             </div>
             <div class="first-menu-bar">
-                <a class="link">Project</a>
+                <a class="link">项目经历</a>
             </div>
             <div class="first-menu-bar">
-                <a class="link">Contact</a>
+                <a class="link">联系</a>
             </div>
             <div id="first-menu-bar">
-                <a class="resume-button" href="./resume.pdf">Resume</a>
+                <a class="resume-button" href="./简历.pdf">简历</a>
             </div>
         </div>
         <nav id="dropdown-menu-display">
             <nav class="dropdown-menu">
                 <nav id="About-section">
-                    <li><a class="sublink" href="#" data-target="my-profolio">My profolio</a></li>
+                    <li>&nbsp;&nbsp;<a class="sublink" href="#" data-target="my-profolio">自我介绍</a></li>
                 </nav>
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Experience-section">
-                    <li><a class="sublink" href="#" data-target="Adobe-intro">Adobe</a></li>
-                    <li><a class="sublink" href="#" data-target="Lenovo-intro">Lenovo</a></li>
-                    <li><a class="sublink" href="#" data-target="Amazon-intro">Amazon</a></li>
+                    <li>&nbsp;&nbsp;<a class="sublink" href="#" data-target="Adobe-intro">Adobe</a></li>
+                    <li>&nbsp;&nbsp;&nbsp;<a class="sublink" href="#" data-target="Lenovo-intro">联想</a></li>
+                    <li>&nbsp;&nbsp;<a class="sublink" href="#" data-target="Amazon-intro">Amazon</a></li>
                 </nav>
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Project-section">
-                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Network Project</a></li>
-                    <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a></li>
-                    <li><a class="sublink" href="#" data-target="Active-Learning">Active Learning</a></li>
-                    <li><a class="sublink" href="#" data-target="Spark-Analysis">Spark analysis</a></li>
+                    <li>&nbsp;&nbsp;<a class="sublink" href="#" data-target="Graduate-Network-Implementation">网络分布式项目</a>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;<a class="sublink" href="#" data-target="Operating-System-Implementation">操作系统实现</a>
+                    </li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="sublink" href="#" data-target="Active-Learning">主动学习</a></li>
+                    <li>&nbsp;&nbsp;<a class="sublink" href="#" data-target="Spark-Analysis">Spark 数据分析</a></li>
                 </nav>
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Contact-section">
-                    <li><a class="sublink" href="#" data-target="my-ins">My Instagram</a></li>
+                    <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="sublink" href="#" data-target="my-ins">我的ins</a></li>
                 </nav>
             </nav>
         </nav>
@@ -118,27 +61,25 @@
     <div id="content">
         <section class="Description-of-my-self">
             <div class="ask-name">
-                <span>Hiii, my name is</span>
-                <span id="switch-ip"></span>
-                <span id="scroll-bar"></span>
+                Hiii, 我的名字是
             </div>
             <div class="big-name">
-                Mingyong Ma.
+                马鸣庸.
             </div>
             <div class="big-name">
-                young man with love and passion
+                一个对技术充满热情和好奇心的年轻人
             </div>
             <div class="self-intro">
-                I am student intended to become a software developer.
+                我现在是一名学生，期望以后成为软件开发工程师
             </div>
         </section>
         <section id="about">
             <h2 class="h2">1.&nbsp;</h2>
-            <h2><em>About Me</em></h2>
+            <h2><em>简单的了解我</em></h2>
             <div class="section2_inner">
                 <div class="my-profolio">
                     <details id="my-profolio">
-                        <summary>Click to unlock</summary>
+                        <summary>点击解锁</summary>
                         <div class="background-image">
                         </div>
                     </details>
@@ -148,99 +89,92 @@
         <hr>
         <section id="projects">
             <h2 class="h2">2.&nbsp;</h2>
-            <h2><i>Some Things I've Build</i></h2>
+            <h2><i>一些我实现的项目</i></h2>
             <div>
-                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
+                <h3 id="Operating-System-Implementation">操作系统实现</h3>
                 <details>
-                    <summary>click to unlock</summary>
+                    <summary>点击解锁</summary>
                     <div>
                         <ul>
                             <li>
-                                Implementing internal structures of the operating system: Alarm() function
-                                to call timer interrupt; Join() function to
-                                sleep the parent while waiting for the child thread to finish;
-                                Implement <b>semaphores</b> to provide atomicity;
+                                实现了操作系统线程结构：如 Alarm() 函数用来call 定时器中断; Join() 函数用来
+                                在子线程完成前另父线程保持睡眠；实现了<b>semaphores</b>用来保证原子性(atomicity)。
                             </li>
                             <li>
-                                create the pageTable data structure for each user process,
-                                which maps the process's <b>virtual addresses</b> to <b>physical addresses</b>.
+                                为每个用户进程创建pageTable数据结构, 该结构将进程的<b>虚拟地址(virtual address)</b>映射到
+                                <b>物理地址(physical address)</b>。
                             </li>
                             <li>
-                                Implementing the file system calls create, open, read, write, close, unlink, join, exit and
+                                实现文件系统system call: create, open, read, write, close, unlink, join, exit
+                                and
                                 exec.
                             </li>
-                            <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
-                                to handle page
-                                faults</li>
+                            <li>
+                                实现 <b>按需调页(demand paging)</b>, <b>分页替换(page replacement)</b> 
+                                以释放物理页面框架(pysical page frame)以处理页面错误(page falut)。
+                            </li>
                         </ul>
                     </div>
                 </details>
             </div>
-        
+
             <div>
-                <h3 id="Graduate-Network-Implementation">Network Course Project</h3>
+                <h3 id="Graduate-Network-Implementation">网络分布式项目</h3>
                 <details>
-                    <summary>click to unlock</summary>
+                    <summary>点击解锁</summary>
                     <div>
                         <ul>
                             <li>
-                                Implementing the http protocol (simple version):
+                                实现了<b>http</b>协议(简洁版本):
                                 <div class="image-container">
                                     <ul>
                                         <li>
-                                            Clients send request messages to the server,
-                                            and servers reply with response messages layered on top of the <b>TCP</b>
-                                            protocol.
+                                            客户端向服务器发送请求消息，服务器在<b>TCP</b>b>协议之上回复响应消息。
                                         </li>
                                         <li>
-                                            Implemented <b>HTTP persistent connection</b>:
-                                            a client can reuse a TCP connection to a given server
+                                            实现了HTTP<b>持久连接(HTTP persistent connection)</b>:
+                                             客户端可以重用到给定服务器的TCP连接。
+        
                                         </li>
                                         <li>
-                                            Provide <b>safe control</b> not allowing clients to access memory other than
-                                            document root.
+                                            提供<b>安全控制(safe control)</b>，不允许客户端访问文档根目录以外的内存。
                                         </li>
                                     </ul>
-                                    <img src="httpPersistent.png" alt="client-server http protocol" class="centered-image" />
+                                    <img src="httpPersistent.png" alt="client-server http protocol"
+                                        class="centered-image" />
                                 </div>
                             </li>
                             <li>
-                                creating a <b>fault tolerant cloud-based file storage service</b> called SurfStore (client and
-                                server communicating using
-                                <b>gRPC</b>):
+                                创建了一个名为SurfStore的<b>容错云文件存储服务(fault tolerant cloud-based file storage service)</b>
+                                （客户端和服务器使用<b>gRPC</b>通信）：
                                 <ul>
                                     <li>
-                                        The SurfStore service is composed of the following two services:
+                                        SurfStore 服务由两个部分构成：
                                     </li>
                                     <div class="image-container2">
                                         <ul>
                                             <li>
-                                                BlockStore: Stores these <b>blocks</b>, and when given an identifier, retrieves
-                                                and returns the appropriate block.
+                                                BlockStore: 存储这些<b>块(blocks)</b>，并在给定标识符时，检索并返回相应的块。
                                             </li>
                                             <li>
-                                                MetaStore: Manages the metadata of files and mapping of filenames to blocks
-                                                (hash marshalled by <b>SHA-256</b>).
+                                                MetaStore: 管理文件的元数据(meta data)和文件名到块的映射（通过<b>SHA-256</b>进行散列编排(marshall)）。
                                             </li>
-                                            <img src="surfStore.png" alt="Basic idea of surfStore" class="centered-image2" />
+                                            <img src="surfStore.png" alt="Basic idea of surfStore"
+                                                class="centered-image2" />
                                         </ul>
                                     </div>
                                     <div class="image-container2">
                                         <li>
-                                            The clients' file data is stored in local database with <b>version</b>. When
-                                            invoking into client, the sync
-                                            operation will
-                                            occur, and
-                                            new files added to base directory will be uploaded to the cloud, files that were
-                                            sync'd to the cloud from other
-                                            clients
-                                            will be downloaded to base directory, and any files which have ''edit conflicts''
-                                            will be resolved.
+                                            客户端的文件数据在本地数据库中以<b>版本(version)</b>的形式存储。
+                                            当调用客户端时，将发生同步操作，并且将新文件添加到基本目录后将被上传到云端，
+                                            其他客户端同步到云端的文件将被下载到基本目录，任何有“编辑冲突”的文件都将得到解决。
                                         </li>
-                                        <img src="version.png" alt="SurfStore version control" class="centered-image2" />
+                                        <img src="version.png" alt="SurfStore version control"
+                                            class="centered-image2" />
                                     </div>
                                     <li>
-                                        Store and manage the block in different BlockStore using <b>Consistent Hashing Ring</b>.
+                                        使用<b>一致性哈希算法(Consistent Hashing
+                                        Ring)</b>在不同的BlockStore中存储和管理块。
                                     </li>
                                     <div class="image-container3">
                                         <div class="sub-class3">
@@ -251,10 +185,10 @@
                                     </div>
                                     <div class="image-container3">
                                         <li>
-                                            Ensure that the MetaStore is fault tolerant and stays consistent regardless of
-                                            minority of server failures by
-                                            <b>RAFT</b>
-                                            protocol. (<a href="https://raft.github.io/raftscope/index.html">Raft Simulator</a>)
+                                            通过<b>RAFT</b>协议确保MetaStore具有容错性(falut tolerant)，
+                                            并且在少数服务器故障(minority of server failure)时，始终保持一致性(consistent)。
+                                             (<a href="https://raft.github.io/raftscope/index.html">Raft
+                                                模拟器</a>)
                                         </li>
                                         <div class="sub-class3">
                                             <img src="RAFT.png" alt="Raft protocol" class="centered-image3" />
@@ -267,61 +201,56 @@
                     </div>
                 </details>
             </div>
-        
+
             <div>
-                <h3 id="Active-Learning">Active Learning for data limited classification task</h3>
+                <h3 id="Active-Learning">对数据有限的分类任务进行主动学习</h3>
                 <details>
-                    <summary>click to unlock</summary>
+                    <summary>点击解锁</summary>
                     <div>
                         <ul>
-                            <li>Applied <b>active learning</b> to the classification task of malaria cells</li>
-                            <li>Used only 26% of the data to achieve comparable accuracy close to the 100% of data usage
-                                in other literature
-                                by applying
-                                <b>uncertainty sampling</b>.
-                            </li>
-                            <li>Explored who has a higher improvement effect on <b>model generalization</b> by comparing
-                                <b>random
-                                    sampling</b>> with uncertainty
-                                sampling and <b>Logistic Regression</b> with <b>SVM</b>.
-                            </li>
-                            <li>Paper accepted by the <b>2021 IEEE 3rd International Conference on Frontiers Technology
+                            <li>将<b>主动学习(active learning)</b>应用于疟疾细胞的分类任务</li>
+                            <li>通过应用<b>不确定性采样(uncertainty sampling)</b>, 使用了26%的数据达到了与其他文献中100%数据使用相近的准确度。</li>
+                            <li>通过比较<b>随机抽样</b>与不确定性抽样以及<b>逻辑回归(Logistic Regression)</b>与<b>SVM</b>，
+                                探讨了谁对<b>模型泛化</b>的改善效果更高。</li>
+                            <li>文章被 <b>2021 IEEE 3rd International Conference on Frontiers Technology
                                     of Information and
-                                    Computer</b>.</li>
+                                    Computer</b>.(水会)采用</li>
                         </ul>
                     </div>
                 </details>
             </div>
 
             <div>
-                <h3 id="Spark-Analysis">DS analysis using spark</h3>
+                <h3 id="Spark-Analysis">用 spark进行数据挖掘</h3>
                 <details>
-                    <summary>click to unlock</summary>
+                    <summary>点击解锁</summary>
                     <div>
                         <ul>
-                            <li>Appling <b>Spark</b> to the analysis of TAVG measurements in India</li>
-                            <li>Used <b>Spark Dataframe</b> and <b>interactive plotting</b>.
+                            <li>使用 <b>Spark</b> 用于分析印度地区的平均气温(TAVG measurements)</li>
+                            <li>使用了 <b>Spark Dataframe</b> 和 <b>interactive plotting</b>.
                             </li>
                             <div class="sub-class4">
                                 <div class="sub-class41">
-                                    <img src="interactive-plotting.png" alt="interactive plotting" class="centered-image4" />
+                                    <img src="interactive-plotting.png" alt="interactive plotting"
+                                        class="centered-image4" />
                                     <img src="Map.png" alt="map of india with aggregation" class="centered-image4" />
                                 </div>
                             </div>
-                            <li>Link on my
+                            <li>链接
                                 <a
-                                    href="https://github.com/Mamioma/DS-analysis-with-spark/blob/master/DS%20analysis%20using%20spark.ipynb">jupeter notebook</a>
+                                    href="https://github.com/Mamioma/DS-analysis-with-spark/blob/master/DS%20analysis%20using%20spark.ipynb">jupeter
+                                    notebook</a>
                             </li>
                         </ul>
                     </div>
                 </details>
             </div>
-        
+
         </section>
         <hr>
         <section id="jobs">
             <h2 class="h2">3.&nbsp;</h2>
-            <h2><em>Where I've Worke</em></h2>
+            <h2><em>工作过的地方</em></h2>
             <aside>
                 <div class="tablelist">
                     <button>
@@ -331,22 +260,22 @@
                         <span>Amazon</span>
                     </button>
                     <button>
-                        <span>Lenovo</span>
+                        <span>联想</span>
                     </button>
                 </div>
             </aside>
             <div class="Job Description">
                 <nav id="Adobe-intro">
                     <h3>
-                        <span>Software Enginee Intern</span>
+                        <span>软件开发实习生</span>
                         <span class="company"></span>
                         &nbsp;
                         <a href="https://www.adobe.com" class="company">@Adobe</a>
                     </h3>
-                    <p>Incoming internship from June - September 2023</p>
+                    <p>即将到来的实习 从 6月 - 9月 2023</p>
                     <div>
                         <ul>
-                            <li>To be continue...</li>
+                            <li>即将发生...</li>
                         </ul>
                     </div>
                 </nav>
@@ -354,25 +283,21 @@
             <div class="Job Description">
                 <nav id="Amazon-intro">
                     <h3>
-                        <span>Software Enginee Intern</span>
+                        <span>软件开发实习生</span>
                         <span class="company"></span>
                         &nbsp;
                         <a href="https://www.amazon.com" class="company">@Amazon</a>
                     </h3>
-                    <p>July - August 2022</p>
+                    <p>7月 - 9月 2022</p>
                     <details>
-                        <summary>click to unlock</summary>
+                        <summary>点击解锁</summary>
                         <div>
                             <ul>
-                                <li>Developed an image processing system that combines deep learning techniques with the Unsharp algorithm,
-                                     achieving lower sharpness results compared to the camera algorithm used in tablets.
-                                      And evaluated the performance of the system using <b>MTF-50</b></li>
-                                <li>Demonstrated ability to compare the performance of algorithms by controlling the imaging device with <b>adb</b> and generating
-                                identical images with different image sharpening settings in the Amazon lab.</li>
-                                <li>Developed a user-friendly model for controlling sharpness manually or automatically.</li>
-                                <li>Tested classical image processing methods including <b>Sobel</b>, <b>Canny</b> operator, and <b>Unsharp</b> algorithm using <b>Imatest</b> software
-                                in the Amazon lab.</li>
-                                <li>Link on my
+                                <li>开发了一个图像处理算法, 该算法将深度学习技术与Unsharp算法相结合, 达到了比平板电脑中使用的相机算法更低的锐度结果。并使用<b>MTF-50</b>评估了算法的性能。</li>
+                                <li>通过使用<b>adb</b>控制成像设备并在亚马逊实验室中生成具有不同图像锐化(sharpness)设置的相同图像，展示了比较算法性能的能力。</li>
+                                <li>开发了一个用户友好的模型，可以手动或自动控制锐度(sharpness)。</li>
+                                <li>在亚马逊实验室使用<b>Imatest</b>软件测试了包括<b>Sobel</b>、<b>Canny</b>算子和<b>Unsharp</b>算法在内的经典图像处理方法。</li>
+                                <li>文档链接
                                     <a
                                         href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if">doc</a>
                                 </li>
@@ -384,22 +309,23 @@
             <div class="Job Description">
                 <nav id="Lenovo-intro">
                     <h3>
-                        <span>Data Enginee Intern</span>
+                        <span>数据分析实习生</span>
                         <span class="company"></span>
                         &nbsp;
-                        <a href="https://www.lenovo.com" class="company">@Lenovo</a>
+                        <a href="https://www.lenovo.com" class="company">@联想</a>
                     </h3>
-                    <p>November 2021 - Febuary 2022</p>
+                    <p>11月 2021 - 2月 2022</p>
                     <details>
-                        <summary>click to unlock</summary>
+                        <summary>点击解锁</summary>
                         <div class="image-container3">
                             <ul>
-                                <li>Conducted time series forecasting to predict future sales of Lenovo's notebook products and tablets, utilizing Lenovo's
-                                historical sales data as well as data from other companies such as <b>IDC</b> and <b>GFK</b>.</li>
-                                <li>Increased the forecasting accuracy of the model by <b>1.2%</b> by implementing machine learning algorithms such as <b>Prophet</b> and
-                                deep learning models like <b>LSTM</b> or <b>GRU</b>.</li>
-                                <li>Used <b>Optuna</b> to make <b>hyperparameter adjustments</b> to the project's existing code, which
-                                    saved a large amount of time compared with the raditional <b>grid search</b> method.</li>
+                                <li>利用联想的历史销售数据以及来自其他公司（如<b>IDC</b>和<b>GFK</b>）的数据，
+                                    进行时间序列预测，预测联想笔记本产品和平板电脑的未来销售。</li>
+                                <li>通过实施<b>Prophet</b>等机器学习算法以及<b>LSTM</b>或<b>GRU</b>等深度学习模型，
+                                    将模型的预测准确度提高了<b>4.2%</b>。</li>
+                                <li>使用<b>Optuna</b>对项目的现有代码进行<b>超参数调整(hyperparameter adjustments)</b>,
+                                    与传统的<b>网格搜索(grid search)</b>方法相比，
+                                    节省了大量时间。</li>
                             </ul>
                             <div class="sub-class4">
                                 <div class="sub-class41">
@@ -497,7 +423,8 @@
                     <div
                         style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
                     </div>
-                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
                     </div>
                 </div>
             </a>
@@ -505,17 +432,17 @@
                 style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
                 <a href="https://www.instagram.com/p/CoJpDg9uosH/?utm_source=ig_embed&amp;utm_campaign=loading"
                     style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
-                    target="_blank">A post shared by Mamio (@mamio_johnson)</a></p>
+                    target="_blank">A post shared by Mamio (@mamio_johnson) 仅支持美国地区使用</a>
+            </p>
         </div>
     </blockquote>
     <script async src="//www.instagram.com/embed.js"></script>
 
     <footer>
         <div class="footer">
-            Design and build by 
-             <span id="MyName">Mingyong Ma</span>.
-              Responsive for both
-               PC and mobile device.
+            设计和搭建的人
+            <span id="MyName">马鸣庸</span>.
+            同时支持在电脑和手机
         </div>
     </footer>
 
