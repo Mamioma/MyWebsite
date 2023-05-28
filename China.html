@@ -10,25 +10,6 @@
 </head>
 
 <body>
-    <script>
-        fetch('https://api.ipgeolocation.io/ipgeo?apiKey=93fa07c34c4847c6a45ec1f6272388a2')
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
-                    // Here you can handle the location data and display different content based on it
-                    // For example:
-                    const country = data.country_name;
-
-                    if (country === 'United States') {
-                        window.location.href = '/US.html';
-                    } else if (country === 'China') {
-                        window.location.href = '/China.html';
-                    } else {
-                        window.location.href = "/US.html";
-                    }
-                })
-                .catch(console.error);
-    </script>
     <header>
         <div id="display-bar">
             <div class="first-menu-bar">
@@ -62,8 +43,10 @@
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Project-section">
-                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Network Project</a></li>
-                    <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a></li>
+                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Network Project</a>
+                    </li>
+                    <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a>
+                    </li>
                     <li><a class="sublink" href="#" data-target="Active-Learning">Active Learning</a></li>
                     <li><a class="sublink" href="#" data-target="Spark-Analysis">Spark analysis</a></li>
                 </nav>
@@ -124,7 +107,8 @@
                                 which maps the process's <b>virtual addresses</b> to <b>physical addresses</b>.
                             </li>
                             <li>
-                                Implementing the file system calls create, open, read, write, close, unlink, join, exit and
+                                Implementing the file system calls create, open, read, write, close, unlink, join, exit
+                                and
                                 exec.
                             </li>
                             <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
@@ -134,7 +118,7 @@
                     </div>
                 </details>
             </div>
-        
+
             <div>
                 <h3 id="Graduate-Network-Implementation">Network Course Project</h3>
                 <details>
@@ -159,11 +143,13 @@
                                             document root.
                                         </li>
                                     </ul>
-                                    <img src="httpPersistent.png" alt="client-server http protocol" class="centered-image" />
+                                    <img src="httpPersistent.png" alt="client-server http protocol"
+                                        class="centered-image" />
                                 </div>
                             </li>
                             <li>
-                                creating a <b>fault tolerant cloud-based file storage service</b> called SurfStore (client and
+                                creating a <b>fault tolerant cloud-based file storage service</b> called SurfStore
+                                (client and
                                 server communicating using
                                 <b>gRPC</b>):
                                 <ul>
@@ -173,14 +159,17 @@
                                     <div class="image-container2">
                                         <ul>
                                             <li>
-                                                BlockStore: Stores these <b>blocks</b>, and when given an identifier, retrieves
+                                                BlockStore: Stores these <b>blocks</b>, and when given an identifier,
+                                                retrieves
                                                 and returns the appropriate block.
                                             </li>
                                             <li>
-                                                MetaStore: Manages the metadata of files and mapping of filenames to blocks
+                                                MetaStore: Manages the metadata of files and mapping of filenames to
+                                                blocks
                                                 (hash marshalled by <b>SHA-256</b>).
                                             </li>
-                                            <img src="surfStore.png" alt="Basic idea of surfStore" class="centered-image2" />
+                                            <img src="surfStore.png" alt="Basic idea of surfStore"
+                                                class="centered-image2" />
                                         </ul>
                                     </div>
                                     <div class="image-container2">
@@ -189,16 +178,20 @@
                                             invoking into client, the sync
                                             operation will
                                             occur, and
-                                            new files added to base directory will be uploaded to the cloud, files that were
+                                            new files added to base directory will be uploaded to the cloud, files that
+                                            were
                                             sync'd to the cloud from other
                                             clients
-                                            will be downloaded to base directory, and any files which have ''edit conflicts''
+                                            will be downloaded to base directory, and any files which have ''edit
+                                            conflicts''
                                             will be resolved.
                                         </li>
-                                        <img src="version.png" alt="SurfStore version control" class="centered-image2" />
+                                        <img src="version.png" alt="SurfStore version control"
+                                            class="centered-image2" />
                                     </div>
                                     <li>
-                                        Store and manage the block in different BlockStore using <b>Consistent Hashing Ring</b>.
+                                        Store and manage the block in different BlockStore using <b>Consistent Hashing
+                                            Ring</b>.
                                     </li>
                                     <div class="image-container3">
                                         <div class="sub-class3">
@@ -209,10 +202,12 @@
                                     </div>
                                     <div class="image-container3">
                                         <li>
-                                            Ensure that the MetaStore is fault tolerant and stays consistent regardless of
+                                            Ensure that the MetaStore is fault tolerant and stays consistent regardless
+                                            of
                                             minority of server failures by
                                             <b>RAFT</b>
-                                            protocol. (<a href="https://raft.github.io/raftscope/index.html">Raft Simulator</a>)
+                                            protocol. (<a href="https://raft.github.io/raftscope/index.html">Raft
+                                                Simulator</a>)
                                         </li>
                                         <div class="sub-class3">
                                             <img src="RAFT.png" alt="Raft protocol" class="centered-image3" />
@@ -225,7 +220,7 @@
                     </div>
                 </details>
             </div>
-        
+
             <div>
                 <h3 id="Active-Learning">Active Learning for data limited classification task</h3>
                 <details>
@@ -262,19 +257,21 @@
                             </li>
                             <div class="sub-class4">
                                 <div class="sub-class41">
-                                    <img src="interactive-plotting.png" alt="interactive plotting" class="centered-image4" />
+                                    <img src="interactive-plotting.png" alt="interactive plotting"
+                                        class="centered-image4" />
                                     <img src="Map.png" alt="map of india with aggregation" class="centered-image4" />
                                 </div>
                             </div>
                             <li>Link on my
                                 <a
-                                    href="https://github.com/Mamioma/DS-analysis-with-spark/blob/master/DS%20analysis%20using%20spark.ipynb">jupeter notebook</a>
+                                    href="https://github.com/Mamioma/DS-analysis-with-spark/blob/master/DS%20analysis%20using%20spark.ipynb">jupeter
+                                    notebook</a>
                             </li>
                         </ul>
                     </div>
                 </details>
             </div>
-        
+
         </section>
         <hr>
         <section id="jobs">
@@ -322,14 +319,18 @@
                         <summary>click to unlock</summary>
                         <div>
                             <ul>
-                                <li>Developed an image processing system that combines deep learning techniques with the Unsharp algorithm,
-                                     achieving lower sharpness results compared to the camera algorithm used in tablets.
-                                      And evaluated the performance of the system using <b>MTF-50</b></li>
-                                <li>Demonstrated ability to compare the performance of algorithms by controlling the imaging device with <b>adb</b> and generating
-                                identical images with different image sharpening settings in the Amazon lab.</li>
-                                <li>Developed a user-friendly model for controlling sharpness manually or automatically.</li>
-                                <li>Tested classical image processing methods including <b>Sobel</b>, <b>Canny</b> operator, and <b>Unsharp</b> algorithm using <b>Imatest</b> software
-                                in the Amazon lab.</li>
+                                <li>Developed an image processing system that combines deep learning techniques with the
+                                    Unsharp algorithm,
+                                    achieving lower sharpness results compared to the camera algorithm used in tablets.
+                                    And evaluated the performance of the system using <b>MTF-50</b></li>
+                                <li>Demonstrated ability to compare the performance of algorithms by controlling the
+                                    imaging device with <b>adb</b> and generating
+                                    identical images with different image sharpening settings in the Amazon lab.</li>
+                                <li>Developed a user-friendly model for controlling sharpness manually or automatically.
+                                </li>
+                                <li>Tested classical image processing methods including <b>Sobel</b>, <b>Canny</b>
+                                    operator, and <b>Unsharp</b> algorithm using <b>Imatest</b> software
+                                    in the Amazon lab.</li>
                                 <li>Link on my
                                     <a
                                         href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if">doc</a>
@@ -352,12 +353,18 @@
                         <summary>click to unlock</summary>
                         <div class="image-container3">
                             <ul>
-                                <li>Conducted time series forecasting to predict future sales of Lenovo's notebook products and tablets, utilizing Lenovo's
-                                historical sales data as well as data from other companies such as <b>IDC</b> and <b>GFK</b>.</li>
-                                <li>Increased the forecasting accuracy of the model by <b>1.2%</b> by implementing machine learning algorithms such as <b>Prophet</b> and
-                                deep learning models like <b>LSTM</b> or <b>GRU</b>.</li>
-                                <li>Used <b>Optuna</b> to make <b>hyperparameter adjustments</b> to the project's existing code, which
-                                    saved a large amount of time compared with the raditional <b>grid search</b> method.</li>
+                                <li>Conducted time series forecasting to predict future sales of Lenovo's notebook
+                                    products and tablets, utilizing Lenovo's
+                                    historical sales data as well as data from other companies such as <b>IDC</b> and
+                                    <b>GFK</b>.
+                                </li>
+                                <li>Increased the forecasting accuracy of the model by <b>1.2%</b> by implementing
+                                    machine learning algorithms such as <b>Prophet</b> and
+                                    deep learning models like <b>LSTM</b> or <b>GRU</b>.</li>
+                                <li>Used <b>Optuna</b> to make <b>hyperparameter adjustments</b> to the project's
+                                    existing code, which
+                                    saved a large amount of time compared with the raditional <b>grid search</b> method.
+                                </li>
                             </ul>
                             <div class="sub-class4">
                                 <div class="sub-class41">
@@ -454,7 +461,8 @@
                     <div
                         style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
                     </div>
-                    <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
                     </div>
                 </div>
             </a>
@@ -470,10 +478,10 @@
 
     <footer>
         <div class="footer">
-            Design and build by 
-             <span id="MyName">Mingyong Ma</span>.
-              Responsive for both
-               PC and mobile device.
+            Design and build by
+            <span id="MyName">Mingyong Ma</span>.
+            Responsive for both
+            PC and mobile device.
         </div>
     </footer>
 
