@@ -1,3 +1,5 @@
+let contentLoad = 0;
+
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".link");
     const submenuItems = document.querySelectorAll(".sublink");
@@ -89,22 +91,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    fetch('https://api.ipgeolocation.io/ipgeo?apiKey=e0b306fb6ba74ec5b98a668ec24fd667')
-        .then(response => response.json())
-        .then(data => {
-            console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
-            // Here you can handle the location data and display different content based on it
-            // For example:
-            const country = data.country_name;
+    if (contentLoad == 0)
+    {
+        contentLoad += 1
+        fetch('https://api.ipgeolocation.io/ipgeo?apiKey=e0b306fb6ba74ec5b98a668ec24fd667')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
+                // Here you can handle the location data and display different content based on it
+                // For example:
+                const country = data.country_name;
 
-            if (country === 'United States' && window.location.href != '/US.html') {
-                window.location.href = '/US.html';
-            } else if (country === 'China' && window.location.href != '/China.html') {
-                window.location.href = '/China.html';
-            } else {
-                window.location.href = "/Nothing.html";
-            }
-        })
-        .catch(console.error);
+                if (country === 'United States') {
+                    window.location.href = '/US.html';
+                } else if (country === 'China') {
+                    window.location.href = '/China.html';
+                } else {
+                    window.location.href = "/Nothing.html";
+                }
+            })
+            .catch(console.error);
+    }
 
 });
