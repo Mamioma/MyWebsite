@@ -88,4 +88,18 @@ document.addEventListener("DOMContentLoaded", function () {
             enterCount--;
         }
     });
+
+    fetch('http://ip-api.com/json/')
+        .then(response => response.json())
+        .then(data => {
+            console.log('Your location is ' + data.city + ', ' + data.regionName + ', ' + data.country);
+            // Here you can handle the location data and display different content based on it
+            // For example:
+            if (data.country === 'United States') {
+                document.getElementById('content').innerText = 'Content for US users';
+            } else {
+                document.getElementById('content').innerText = 'Content for non-US users';
+            }
+        })
+        .catch(console.error);
 });
