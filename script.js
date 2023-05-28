@@ -95,10 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
             // Here you can handle the location data and display different content based on it
             // For example:
-            if (data.country_name === 'United States') {
-                document.getElementById('content').innerText = 'Content for US users';
+            const country = data.country_name;
+
+            if (country === 'United States') {
+                window.location.href = '/US.html';
+            } else if (country === 'China') {
+                window.location.href = '/China.html';
             } else {
-                document.getElementById('content').innerText = 'Content for non-US users';
+                window.location.href = "/Nothing.html";
             }
         })
         .catch(console.error);
