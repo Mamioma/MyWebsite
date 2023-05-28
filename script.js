@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
             // For example:
             const country = data.country_name;
 
-            if (country === 'United States') {
+            if (country === 'United States' && window.location.href != '/US.html') {
                 window.location.href = '/US.html';
-            } else if (country === 'China') {
+            } else if (country === 'China' && window.location.href != '/China.html') {
                 window.location.href = '/China.html';
             } else {
                 window.location.href = "/Nothing.html";
