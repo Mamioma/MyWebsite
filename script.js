@@ -89,17 +89,18 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    fetch('http://ip-api.com/json/')
+    fetch('https://api.ipgeolocation.io/ipgeo?apiKey=e0b306fb6ba74ec5b98a668ec24fd667')
         .then(response => response.json())
         .then(data => {
-            console.log('Your location is ' + data.city + ', ' + data.regionName + ', ' + data.country);
+            console.log('Your location is ' + data.city + ', ' + data.state_prov + ', ' + data.country_name);
             // Here you can handle the location data and display different content based on it
             // For example:
-            if (data.country === 'United States') {
+            if (data.country_name === 'United States') {
                 document.getElementById('content').innerText = 'Content for US users';
             } else {
                 document.getElementById('content').innerText = 'Content for non-US users';
             }
         })
         .catch(console.error);
+
 });
