@@ -3,6 +3,23 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
+            background-color: #0a192f;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            padding: 8px 12px;
+            font-size: 14px;
+            color: #64ffda;
+            width: 50px;
+        }
+    
+    #switch-ip {
+        margin-left: 5rem;
+    }
+
+    select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
             background: url(arrow-down.png) no-repeat right center;
             padding-right: 20px;
             /* Adjust as needed */
