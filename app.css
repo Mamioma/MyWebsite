@@ -394,7 +394,7 @@
             height: 50px;
             justify-content: space-between;
             align-content: flex-end;
-            margin-left: 10rem;
+            margin-left: 2rem;
         }
     
         .menu-bar {
@@ -481,6 +481,7 @@
         .dropdown-menu {
             display: none;
             list-style: none;
+            margin-right: 3rem;
             /* position: absolute; */
             /* background-color: #132e56; */
             padding: 12px 16px;
@@ -503,7 +504,7 @@
         }
     
         #dropdown-menu-display {
-            margin-left: 8rem;
+            /* margin-left: 8rem; */
             /* margin-right: 20rem; */
             display: flex;
             flex-direction: row;
