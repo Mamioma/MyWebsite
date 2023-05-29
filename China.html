@@ -111,7 +111,7 @@
                             </li>
                             <li>
                                 实现 <b>按需调页(demand paging)</b>, <b>分页替换(page replacement)</b> 
-                                以释放物理页面框架(pysical page frame)以处理页面错误(page falut)。
+                                以释放物理页面框架(physical page frame)以处理页面错误(page falut)。
                             </li>
                         </ul>
                     </div>
@@ -129,7 +129,7 @@
                                 <div class="image-container">
                                     <ul>
                                         <li>
-                                            客户端向服务器发送请求消息，服务器在<b>TCP</b>b>协议之上回复响应消息。
+                                            客户端向服务器发送请求消息，服务器在<b>TCP</b>协议之上回复响应消息。
                                         </li>
                                         <li>
                                             实现了HTTP<b>持久连接(HTTP persistent connection)</b>:
@@ -165,9 +165,9 @@
                                     </div>
                                     <div class="image-container2">
                                         <li>
-                                            客户端的文件数据在本地数据库中以<b>版本(version)</b>的形式存储。
-                                            当调用客户端时，将发生同步操作，并且将新文件添加到基本目录后将被上传到云端，
-                                            其他客户端同步到云端的文件将被下载到基本目录，任何有“编辑冲突”的文件都将得到解决。
+                                            客户端的文件数据在本地数据库中以<b>版本(version)</b>的进行存储。
+                                            运行客户端时，会发生同步操作(sync)，并将新文件添加到基本目录后上传到云端，
+                                            其他客户端同步到云端的文件将被下载到基本目录，解决任何有冲突的文件。
                                         </li>
                                         <img src="version.png" alt="SurfStore version control"
                                             class="centered-image2" />
@@ -294,7 +294,7 @@
                         <div>
                             <ul>
                                 <li>开发了一个图像处理算法, 该算法将深度学习技术与Unsharp算法相结合, 达到了比平板电脑中使用的相机算法更低的锐度结果。并使用<b>MTF-50</b>评估了算法的性能。</li>
-                                <li>通过使用<b>adb</b>控制成像设备并在亚马逊实验室中生成具有不同图像锐化(sharpness)设置的相同图像，展示了比较算法性能的能力。</li>
+                                <li>通过使用<b>adb</b>控制成像设备并在亚马逊实验室中生成不同锐化(sharpness)参数的图像，用于比较算法性能。</li>
                                 <li>开发了一个用户友好的模型，可以手动或自动控制锐度(sharpness)。</li>
                                 <li>在亚马逊实验室使用<b>Imatest</b>软件测试了包括<b>Sobel</b>、<b>Canny</b>算子和<b>Unsharp</b>算法在内的经典图像处理方法。</li>
                                 <li>文档链接
@@ -320,7 +320,7 @@
                         <div class="image-container3">
                             <ul>
                                 <li>利用联想的历史销售数据以及来自其他公司（如<b>IDC</b>和<b>GFK</b>）的数据，
-                                    进行时间序列预测，预测联想笔记本产品和平板电脑的未来销售。</li>
+                                    进行<b>时间序列预测(time series forecast)</b>，预测联想笔记本产品和平板电脑的未来销售。</li>
                                 <li>通过实施<b>Prophet</b>等机器学习算法以及<b>LSTM</b>或<b>GRU</b>等深度学习模型，
                                     将模型的预测准确度提高了<b>4.2%</b>。</li>
                                 <li>使用<b>Optuna</b>对项目的现有代码进行<b>超参数调整(hyperparameter adjustments)</b>,
