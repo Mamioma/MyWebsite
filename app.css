@@ -11,6 +11,10 @@
             color: #64ffda;
             width: 50px;
         }
+    
+    #selectOption {
+        font-size: 10px;
+    }
 
     #switch-ip {
         font-size: 10px;
@@ -20,7 +24,7 @@
     }
 
     #switch-ip2 {
-        font-size: 10px;
+        font-size: 5px;
         color: #64ffda;
     }
 
