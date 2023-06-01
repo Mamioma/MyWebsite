@@ -11,9 +11,21 @@
             color: #64ffda;
             width: 50px;
         }
-    
+        
     #switch-ip {
-        margin-left: 1rem;
+        color: #64ffda;
+        position: absolute;
+        right: 0;
+    }
+
+    #switch-ip2 {
+        font-size: 20px;
+        color: #64ffda;
+    }
+
+    #assist-position {
+        position: absolute;
+        right: 0;
     }
 
     select {
