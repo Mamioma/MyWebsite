@@ -20,7 +20,50 @@
                     const country = data.country_name;
 
                     if (country === 'United States') {
-                        window.location.href = '/US.html';
+                        const ipSwitch = document.getElementById("switch-ip");
+                        const ipSwitch2 = document.getElementById("switch-ip2");
+                        const scrollBar = document.getElementById("scroll-bar");
+                        ipSwitch.innerText = "It appears that you are located in the US.";
+                        ipSwitch2.innerText = "Would you like to explore versions in other languages?";
+
+                        // Create the select element
+                        const selectElement = document.createElement("select");
+                        selectElement.id = "selectOption";
+
+                        // Create the option elements
+                        const optionQuery = document.createElement("option");
+                        optionQuery.value = "Query";
+                        optionQuery.textContent = "options:";
+
+                        const option1 = document.createElement("option");
+                        option1.value = "Chinese";
+                        option1.textContent = "Yes, I want to view 中文(Chinese)";
+
+                        const option2 = document.createElement("option");
+                        option2.value = "English";
+                        option2.textContent = "No, English works for me";
+
+                        // Append the option elements to the select element
+                        selectElement.appendChild(optionQuery);
+                        selectElement.appendChild(option1);
+                        selectElement.appendChild(option2);
+
+                        // Append the select element to the div element
+                        scrollBar.appendChild(selectElement);
+
+                        selectElement.addEventListener("change", function () {
+                            // Get the selected value
+                            const selectedValue = selectElement.value;
+                            console.log(selectedValue);
+                            // Perform actions based on the selected value
+                            if (selectedValue === "Chinese") {
+                                // Action for Option 1
+                                window.location.href = '/China.html';
+                            } else {
+                                window.location.href = '/US.html';
+                            }
+                        });
+
                     } else if (country === 'China') {
                         window.location.href = '/China.html';
                     } else {
@@ -120,10 +163,13 @@
             <div class="ask-name">
                 <span>Hiii, my name is</span>
                 <span id="switch-ip"></span>
-                <span id="scroll-bar"></span>
             </div>
             <div class="big-name">
-                Mingyong Ma.
+                <span>Mingyong Ma.</span>
+                <span id = "assist-position">
+                    <span id="switch-ip2"></span>
+                    <span id="scroll-bar"></span>
+                </span>
             </div>
             <div class="big-name">
                 young man with love and passion

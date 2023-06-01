@@ -13,7 +13,7 @@
         }
     
     #switch-ip {
-        margin-left: 5rem;
+        margin-left: 1rem;
     }
 
     select {
@@ -165,6 +165,7 @@
             color: #64ffda;
             font-size: 16px;
             margin: 1rem 0 1rem 0;
+            position: relative;
         }
     
         .big-name {
@@ -173,6 +174,7 @@
             color: #CCD6F6;
             font-size: 24px;
             margin: 1rem 0 1rem 0;
+            position: relative;
         }
     
         .self-intro {
@@ -377,7 +379,19 @@
         }
     
     #switch-ip {
-        margin-left: 10rem;
+        color: #64ffda;
+        position: absolute;
+        right: 0;
+    }
+
+    #switch-ip2 {
+        font-size: 20px;
+        color: #64ffda;
+    }
+
+    #assist-position {
+        position: absolute;
+        right: 0;
     }
 
     body {
@@ -518,6 +532,7 @@
             color: #64ffda;
             font-size: 20px;
             margin: 1rem 0 1rem 0;
+            position: relative;
         }
     
         .big-name {
@@ -526,6 +541,7 @@
             color: #CCD6F6;
             font-size: 40px;
             margin: 1rem 0 1rem 0;
+            position: relative;
         }
     
         .self-intro {
