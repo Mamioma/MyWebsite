@@ -43,7 +43,9 @@
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Project-section">
-                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">网络分布式项目</a>
+                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">分布式云文件管理系统</a>
+                    </li>
+                    <li><a class="sublink" href="#" data-target="BTree-Buffer-Pool">带缓冲区管理的B+树</a>
                     </li>
                     <li><a class="sublink" href="#" data-target="Operating-System-Implementation">操作系统实现</a>
                     </li>
@@ -90,36 +92,9 @@
         <section id="projects">
             <h2 class="h2">2.&nbsp;</h2>
             <h2><i>一些我实现的项目</i></h2>
-            <div>
-                <h3 id="Operating-System-Implementation">操作系统实现</h3>
-                <details>
-                    <summary>点击解锁</summary>
-                    <div>
-                        <ul>
-                            <li>
-                                实现了操作系统线程结构：如 Alarm() 函数用来call 定时器中断; Join() 函数用来
-                                在子线程完成前另父线程保持睡眠；实现了<b>semaphores</b>用来保证原子性(atomicity)。
-                            </li>
-                            <li>
-                                为每个用户进程创建pageTable数据结构, 该结构将进程的<b>虚拟地址(virtual address)</b>映射到
-                                <b>物理地址(physical address)</b>。
-                            </li>
-                            <li>
-                                实现文件系统system call: create, open, read, write, close, unlink, join, exit
-                                and
-                                exec.
-                            </li>
-                            <li>
-                                实现 <b>按需调页(demand paging)</b>, <b>分页替换(page replacement)</b> 
-                                用以释放物理页面框架(physical page frame)以处理页面错误(page falut)。
-                            </li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
 
             <div>
-                <h3 id="Graduate-Network-Implementation">网络分布式项目</h3>
+                <h3 id="Graduate-Network-Implementation">分布式云文件管理系统</h3>
                 <details>
                     <summary>点击解锁</summary>
                     <div>
@@ -196,6 +171,51 @@
                                         </div>
                                     </div>
                                 </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="BTree-Buffer-Pool">带缓冲区管理的B+树</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>在I/O层之上构建一个<b>缓冲池(buffer pool)</b>, 该缓冲池包含<b>页帧(page frame)</b>和一个哈希表，该哈希表将帧号映射到页号。</li>
+                            <li>一个页帧具有<b>PinCnt</b>(页面是否正在被使用), <b>脏位</b>(页面是否被修改), <b>参考位</b>(用于LRU时钟算法)。</li>
+                            <li>实现<b>缓冲替换策略(buffer replacement policy)</b>和<b>LRU时钟算法(LRU clock algorithm)</b>。</li>
+                            <li>在缓冲池层之上构建一个B+树, 支持INSERT/DELETE操作。</li>
+                            <li>通过<b>批量加载(bulk loading)</b>初始化B+树，并在数量超过"fanout"时分割页面。</li>
+                            <li>B+树支持插入<b>int</b>、<b>double</b>和<b>char*</b>变量。</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="Operating-System-Implementation">操作系统实现</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                实现了操作系统线程结构：如 Alarm() 函数用来call 定时器中断; Join() 函数用来
+                                在子线程完成前另父线程保持睡眠；实现了<b>semaphores</b>用来保证原子性(atomicity)。
+                            </li>
+                            <li>
+                                为每个用户进程创建pageTable数据结构, 该结构将进程的<b>虚拟地址(virtual address)</b>映射到
+                                <b>物理地址(physical address)</b>。
+                            </li>
+                            <li>
+                                实现文件系统system call: create, open, read, write, close, unlink, join, exit
+                                and
+                                exec.
+                            </li>
+                            <li>
+                                实现 <b>按需调页(demand paging)</b>, <b>分页替换(page replacement)</b>
+                                用以释放物理页面框架(physical page frame)以处理页面错误(page falut)。
                             </li>
                         </ul>
                     </div>

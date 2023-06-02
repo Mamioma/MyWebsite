@@ -189,7 +189,8 @@
             </nav>
             <nav class="dropdown-menu">
                 <nav id="Project-section">
-                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Network Project</a></li>
+                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">Distribute Cloud File System</a></li>
+                    <li><a class="sublink" href="#" data-target="BTree-Buffer-Pool">B+ Tree with Buffer Management</a></li>
                     <li><a class="sublink" href="#" data-target="Operating-System-Implementation">OS Implementation</a></li>
                     <li><a class="sublink" href="#" data-target="Active-Learning">Active Learning</a></li>
                     <li><a class="sublink" href="#" data-target="Spark-Analysis">Spark analysis</a></li>
@@ -239,36 +240,9 @@
         <section id="projects">
             <h2 class="h2">2.&nbsp;</h2>
             <h2><i>Some Things I've Build</i></h2>
-            <div>
-                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
-                <details>
-                    <summary>click to unlock</summary>
-                    <div>
-                        <ul>
-                            <li>
-                                Implementing internal structures of the operating system: Alarm() function
-                                to call timer interrupt; Join() function to
-                                sleep the parent while waiting for the child thread to finish;
-                                Implement <b>semaphores</b> to provide atomicity;
-                            </li>
-                            <li>
-                                create the pageTable data structure for each user process,
-                                which maps the process's <b>virtual addresses</b> to <b>physical addresses</b>.
-                            </li>
-                            <li>
-                                Implementing the file system calls create, open, read, write, close, unlink, join, exit and
-                                exec.
-                            </li>
-                            <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
-                                to handle page
-                                faults</li>
-                        </ul>
-                    </div>
-                </details>
-            </div>
         
             <div>
-                <h3 id="Graduate-Network-Implementation">Network Course Project</h3>
+                <h3 id="Graduate-Network-Implementation">Distribute Cloud File System</h3>
                 <details>
                     <summary>click to unlock</summary>
                     <div>
@@ -353,6 +327,51 @@
                                     </div>
                                 </ul>
                             </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="BTree-Buffer-Pool">B+ Tree with Buffer Management</h3>
+                <details>
+                    <summary>click to unlock</summary>
+                    <div>
+                        <ul>
+                            <li>Build a <b>Buffer Pool</b> on top of I/O layer with <b>page frames</b> and a hashtable which maps frame number to page number.</li>
+                            <li>A page frame has <b>PinCnt</b>(whether the page is being used), <b>dirty bit</b>(whether the page is modified), <b>reference bit</b>(used for LRU clock alogorithm).</li>
+                            <li>Implement <b>buffer replacement policy</b> and <b>LRU clock algorithm.</b></li>
+                            <li>Build a B+ Tree on top of Buffer Pool layer, supporting INSERT/DELETE operation.</li>
+                            <li>Initialize B+ Tree with <b>bulk loading</b> and split a page when number exceed "fanout".</li>
+                            <li>B+ Tree support inserting <b>int</b>, <b>double</b> and <b>char*</b> variable.</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="Operating-System-Implementation">Operating System Implementation</h3>
+                <details>
+                    <summary>click to unlock</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                Implementing internal structures of the operating system: Alarm() function
+                                to call timer interrupt; Join() function to
+                                sleep the parent while waiting for the child thread to finish;
+                                Implement <b>semaphores</b> to provide atomicity;
+                            </li>
+                            <li>
+                                create the pageTable data structure for each user process,
+                                which maps the process's <b>virtual addresses</b> to <b>physical addresses</b>.
+                            </li>
+                            <li>
+                                Implementing the file system calls create, open, read, write, close, unlink, join, exit and
+                                exec.
+                            </li>
+                            <li>Implement <b>demand paging</b>, <b>page replacement</b> to free up a physical page frame
+                                to handle page
+                                faults</li>
                         </ul>
                     </div>
                 </details>
