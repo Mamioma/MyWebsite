@@ -523,16 +523,16 @@
         }
     
         #About-section {
-            margin-right: 7rem;
+            margin-right: 5.5rem;
         }
     
-        #Experience-section {
-            margin-right: 6.5rem;
-        }
+        /* #Experience-section {
+            margin-right: -1rem;
+        } */
     
-        #Project-section {
+        /* #Project-section {
             margin-right: 3.5rem;
-        }
+        } */
     
         #dropdown-menu-display {
             /* margin-left: 8rem; */
