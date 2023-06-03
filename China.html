@@ -63,10 +63,15 @@
     <div id="content">
         <section class="Description-of-my-self">
             <div class="ask-name">
-                Hiii, 我的名字是
+                <span>Hiii, 我的名字是</span>
+                <span id="switch-ip"></span>
             </div>
             <div class="big-name">
-                马鸣庸.
+                <span>马鸣庸.</span>
+                <span id="assist-position">
+                    <span id="switch-ip2"></span>
+                    <span id="scroll-bar"></span>
+                </span>
             </div>
             <div class="big-name">
                 一个对技术充满热情和好奇心的年轻人
@@ -108,8 +113,8 @@
                                         </li>
                                         <li>
                                             实现了HTTP<b>持久连接(HTTP persistent connection)</b>:
-                                             客户端可以重用到给定服务器的TCP连接。
-        
+                                            客户端可以重用到给定服务器的TCP连接。
+
                                         </li>
                                         <li>
                                             提供<b>安全控制(safe control)</b>，不允许客户端访问文档根目录以外的内存。
@@ -132,7 +137,8 @@
                                                 BlockStore: 存储这些<b>块(blocks)</b>，并在给定标识符时，检索并返回相应的块。
                                             </li>
                                             <li>
-                                                MetaStore: 管理文件的元数据(meta data)和文件名到块的映射（通过<b>SHA-256</b>进行散列编排(marshall)）。
+                                                MetaStore: 管理文件的元数据(meta
+                                                data)和文件名到块的映射（通过<b>SHA-256</b>进行散列编排(marshall)）。
                                             </li>
                                             <img src="surfStore.png" alt="Basic idea of surfStore"
                                                 class="centered-image2" />
@@ -149,7 +155,7 @@
                                     </div>
                                     <li>
                                         使用<b>一致性哈希算法(Consistent Hashing
-                                        Ring)</b>在不同的BlockStore中存储和管理块。
+                                            Ring)</b>在不同的BlockStore中存储和管理块。
                                     </li>
                                     <div class="image-container3">
                                         <div class="sub-class3">
@@ -162,7 +168,7 @@
                                         <li>
                                             通过<b>RAFT</b>协议确保MetaStore具有容错性(falut tolerant)，
                                             并且在少数服务器故障(minority of server failure)时，始终保持一致性(consistent)。
-                                             (<a href="https://raft.github.io/raftscope/index.html">Raft
+                                            (<a href="https://raft.github.io/raftscope/index.html">Raft
                                                 模拟器</a>)
                                         </li>
                                         <div class="sub-class3">
@@ -313,10 +319,12 @@
                         <summary>点击解锁</summary>
                         <div>
                             <ul>
-                                <li>开发了一个图像处理算法, 该算法将深度学习技术与Unsharp算法相结合, 达到了比平板电脑中使用的相机算法更低的锐度结果。并使用<b>MTF-50</b>评估了算法的性能。</li>
+                                <li>开发了一个图像处理算法, 该算法将深度学习技术与Unsharp算法相结合,
+                                    达到了比平板电脑中使用的相机算法更低的锐度结果。并使用<b>MTF-50</b>评估了算法的性能。</li>
                                 <li>通过使用<b>adb</b>控制成像设备并在亚马逊实验室中生成不同锐化(sharpness)参数的图像，用于比较算法性能。</li>
                                 <li>开发了一个用户友好的模型，可以手动或自动控制锐度(sharpness)。</li>
-                                <li>在亚马逊实验室使用<b>Imatest</b>软件测试了包括<b>Sobel</b>、<b>Canny</b>算子和<b>Unsharp</b>算法在内的经典图像处理方法。</li>
+                                <li>在亚马逊实验室使用<b>Imatest</b>软件测试了包括<b>Sobel</b>、<b>Canny</b>算子和<b>Unsharp</b>算法在内的经典图像处理方法。
+                                </li>
                                 <li>文档链接
                                     <a
                                         href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if">doc</a>
@@ -467,6 +475,53 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        console.log("i am here");
+        const ipSwitch = document.getElementById("switch-ip");
+        const ipSwitch2 = document.getElementById("switch-ip2");
+        const scrollBar = document.getElementById("scroll-bar");
+        ipSwitch.innerText = "IP 地址显示你在中国.";
+        ipSwitch2.innerText = "是否想看其他语言的简历网站?";
+
+        // Create the select element
+        const selectElement = document.createElement("select");
+        selectElement.id = "selectOption";
+
+        // Create the option elements
+        const optionQuery = document.createElement("option");
+        optionQuery.value = "Query";
+        optionQuery.textContent = "选项:";
+
+        const option1 = document.createElement("option");
+        option1.value = "English";
+        option1.textContent = "是的，我想看英文版的";
+
+        const option2 = document.createElement("option");
+        option2.value = "Chinese";
+        option2.textContent = "不，中文就ok的";
+
+        // Append the option elements to the select element
+        selectElement.appendChild(optionQuery);
+        selectElement.appendChild(option1);
+        selectElement.appendChild(option2);
+
+        // Append the select element to the div element
+        scrollBar.appendChild(selectElement);
+
+        selectElement.addEventListener("change", function () {
+            // Get the selected value
+            const selectedValue = selectElement.value;
+            console.log(selectedValue);
+            // Perform actions based on the selected value
+            if (selectedValue === "Chinese") {
+                // Action for Option 1
+                window.location.href = '/中国.html';
+            } else {
+                window.location.href = '/US.html';
+            }
+        });
+    </script>
 
 </body>
 
