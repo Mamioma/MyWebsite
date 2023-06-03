@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a quick &copy; start</title>
+    <link rel="stylesheet" href="china.css">
+</head>
+
+<body>
+    <script>
+        const ipSwitch = document.getElementById("switch-ip");
+        const ipSwitch2 = document.getElementById("switch-ip2");
+        const scrollBar = document.getElementById("scroll-bar");
+        ipSwitch.innerText = "IP 地址显示你在中国.";
+        ipSwitch2.innerText = "是否想看其他语言的简历网站?";
+
+        // Create the select element
+        const selectElement = document.createElement("select");
+        selectElement.id = "selectOption";
+
+        // Create the option elements
+        const optionQuery = document.createElement("option");
+        optionQuery.value = "Query";
+        optionQuery.textContent = "options:";
+
+        const option1 = document.createElement("option");
+        option1.value = "English";
+        option1.textContent = "是的，我想看英文版的";
+
+        const option2 = document.createElement("option");
+        option2.value = "Chinese";
+        option2.textContent = "不，中文就ok的";
+
+        // Append the option elements to the select element
+        selectElement.appendChild(optionQuery);
+        selectElement.appendChild(option1);
+        selectElement.appendChild(option2);
+
+        // Append the select element to the div element
+        scrollBar.appendChild(selectElement);
+
+        selectElement.addEventListener("change", function () {
+            // Get the selected value
+            const selectedValue = selectElement.value;
+            console.log(selectedValue);
+            // Perform actions based on the selected value
+            if (selectedValue === "Chinese") {
+                // Action for Option 1
+                window.location.href = '/China.html';
+            } else {
+                window.location.href = '/US.html';
+            }
+        });
+    </script>
+    <header>
+        <div id="display-bar">
+            <div class="first-menu-bar">
+                <a class="link">关于我</a>
+            </div>
+            <div class="first-menu-bar">
+                <a class="link">实习经历</a>
+            </div>
+            <div class="first-menu-bar">
+                <a class="link">项目经历</a>
+            </div>
+            <div class="first-menu-bar">
+                <a class="link">联系</a>
+            </div>
+            <div id="first-menu-bar">
+                <a class="resume-button" href="./简历.pdf">简历</a>
+            </div>
+        </div>
+        <nav id="dropdown-menu-display">
+            <nav class="dropdown-menu">
+                <nav id="About-section">
+                    <li><a class="sublink" href="#" data-target="my-profolio">自我介绍</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Experience-section">
+                    <li><a class="sublink" href="#" data-target="Adobe-intro">Adobe</a></li>
+                    <li><a class="sublink" href="#" data-target="Lenovo-intro">联想</a></li>
+                    <li><a class="sublink" href="#" data-target="Amazon-intro">Amazon</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Project-section">
+                    <li><a class="sublink" href="#" data-target="Graduate-Network-Implementation">分布式云文件管理系统</a>
+                    </li>
+                    <li><a class="sublink" href="#" data-target="BTree-Buffer-Pool">带缓冲区管理的B+树</a>
+                    </li>
+                    <li><a class="sublink" href="#" data-target="Operating-System-Implementation">操作系统实现</a>
+                    </li>
+                    <li><a class="sublink" href="#" data-target="Active-Learning">主动学习</a></li>
+                    <li><a class="sublink" href="#" data-target="Spark-Analysis">Spark 数据分析</a></li>
+                </nav>
+            </nav>
+            <nav class="dropdown-menu">
+                <nav id="Contact-section">
+                    <li><a class="sublink" href="#" data-target="my-ins">我的ins</a></li>
+                </nav>
+            </nav>
+        </nav>
+    </header>
+    <div id="content">
+        <section class="Description-of-my-self">
+            <div class="ask-name">
+                Hiii, 我的名字是
+            </div>
+            <div class="big-name">
+                马鸣庸.
+            </div>
+            <div class="big-name">
+                一个对技术充满热情和好奇心的年轻人
+            </div>
+            <div class="self-intro">
+                我现在是一名学生，期望以后成为软件开发工程师
+            </div>
+        </section>
+        <section id="about">
+            <h2 class="h2">1.&nbsp;</h2>
+            <h2><em>简单的了解我</em></h2>
+            <div class="section2_inner">
+                <div class="my-profolio">
+                    <details id="my-profolio">
+                        <summary>点击解锁</summary>
+                        <div class="background-image">
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projects">
+            <h2 class="h2">2.&nbsp;</h2>
+            <h2><i>一些我实现的项目</i></h2>
+
+            <div>
+                <h3 id="Graduate-Network-Implementation">分布式云文件管理系统</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                实现了<b>http</b>协议(简洁版本):
+                                <div class="image-container">
+                                    <ul>
+                                        <li>
+                                            客户端向服务器发送请求消息，服务器在<b>TCP</b>协议之上回复响应消息。
+                                        </li>
+                                        <li>
+                                            实现了HTTP<b>持久连接(HTTP persistent connection)</b>:
+                                            客户端可以重用到给定服务器的TCP连接。
+
+                                        </li>
+                                        <li>
+                                            提供<b>安全控制(safe control)</b>，不允许客户端访问文档根目录以外的内存。
+                                        </li>
+                                    </ul>
+                                    <img src="httpPersistent.png" alt="client-server http protocol"
+                                        class="centered-image" />
+                                </div>
+                            </li>
+                            <li>
+                                创建了一个名为SurfStore的<b>容错云文件存储服务(fault tolerant cloud-based file storage service)</b>
+                                （客户端和服务器使用<b>gRPC</b>通信）：
+                                <ul>
+                                    <li>
+                                        SurfStore 服务由两个部分构成：
+                                    </li>
+                                    <div class="image-container2">
+                                        <ul>
+                                            <li>
+                                                BlockStore: 存储这些<b>块(blocks)</b>，并在给定标识符时，检索并返回相应的块。
+                                            </li>
+                                            <li>
+                                                MetaStore: 管理文件的元数据(meta
+                                                data)和文件名到块的映射（通过<b>SHA-256</b>进行散列编排(marshall)）。
+                                            </li>
+                                            <img src="surfStore.png" alt="Basic idea of surfStore"
+                                                class="centered-image2" />
+                                        </ul>
+                                    </div>
+                                    <div class="image-container2">
+                                        <li>
+                                            客户端的文件数据在本地数据库中以<b>版本(version)</b>的进行存储。
+                                            运行客户端时，会发生同步操作(sync)，并将新文件添加到基本目录后上传到云端，
+                                            其他客户端同步到云端的文件将被下载到基本目录，解决任何有冲突的文件。
+                                        </li>
+                                        <img src="version.png" alt="SurfStore version control"
+                                            class="centered-image2" />
+                                    </div>
+                                    <li>
+                                        使用<b>一致性哈希算法(Consistent Hashing
+                                            Ring)</b>在不同的BlockStore中存储和管理块。
+                                    </li>
+                                    <div class="image-container3">
+                                        <div class="sub-class3">
+                                            <img src="ConsistentHashing.png" alt="Consistent Hashing Ring"
+                                                class="centered-image3" />
+                                            <img src="Akamai.png" alt="Akamai paper" class="centered-image3" />
+                                        </div>
+                                    </div>
+                                    <div class="image-container3">
+                                        <li>
+                                            通过<b>RAFT</b>协议确保MetaStore具有容错性(falut tolerant)，
+                                            并且在少数服务器故障(minority of server failure)时，始终保持一致性(consistent)。
+                                            (<a href="https://raft.github.io/raftscope/index.html">Raft
+                                                模拟器</a>)
+                                        </li>
+                                        <div class="sub-class3">
+                                            <img src="RAFT.png" alt="Raft protocol" class="centered-image3" />
+                                            <img src="RAFT2.png" alt="Raft visulization" class="centered-image3" />
+                                        </div>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="BTree-Buffer-Pool">带缓冲区管理的B+树</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>在I/O层之上构建一个<b>缓冲池(buffer pool)</b>, 该缓冲池包含<b>页帧(page frame)</b>和一个哈希表，该哈希表将帧号映射到页号。</li>
+                            <li>一个页帧具有<b>PinCnt</b>(页面是否正在被使用), <b>脏位</b>(页面是否被修改), <b>参考位</b>(用于LRU时钟算法)。</li>
+                            <li>实现<b>缓冲替换策略(buffer replacement policy)</b>和<b>LRU时钟算法(LRU clock algorithm)</b>。</li>
+                            <li>在缓冲池层之上构建一个B+树, 支持INSERT/DELETE操作。</li>
+                            <li>通过<b>批量加载(bulk loading)</b>初始化B+树，并在数量超过"fanout"时分割页面。</li>
+                            <li>B+树支持插入<b>int</b>、<b>double</b>和<b>char*</b>变量。</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="Operating-System-Implementation">操作系统实现</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>
+                                实现了操作系统线程结构：如 Alarm() 函数用来call 定时器中断; Join() 函数用来
+                                在子线程完成前另父线程保持睡眠；实现了<b>semaphores</b>用来保证原子性(atomicity)。
+                            </li>
+                            <li>
+                                为每个用户进程创建pageTable数据结构, 该结构将进程的<b>虚拟地址(virtual address)</b>映射到
+                                <b>物理地址(physical address)</b>。
+                            </li>
+                            <li>
+                                实现文件系统system call: create, open, read, write, close, unlink, join, exit
+                                and
+                                exec.
+                            </li>
+                            <li>
+                                实现 <b>按需调页(demand paging)</b>, <b>分页替换(page replacement)</b>
+                                用以释放物理页面框架(physical page frame)以处理页面错误(page falut)。
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="Active-Learning">对数据有限的分类任务进行主动学习</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>将<b>主动学习(active learning)</b>应用于疟疾细胞的分类任务</li>
+                            <li>通过应用<b>不确定性采样(uncertainty sampling)</b>, 使用了26%的数据达到了与其他文献中100%数据使用相近的准确度。</li>
+                            <li>通过比较<b>随机抽样</b>与不确定性抽样以及<b>逻辑回归(Logistic Regression)</b>与<b>SVM</b>，
+                                探讨了谁对<b>模型泛化</b>的改善效果更高。</li>
+                            <li>文章被 <b>2021 IEEE 3rd International Conference on Frontiers Technology
+                                    of Information and
+                                    Computer</b>.(水会)采用</li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <div>
+                <h3 id="Spark-Analysis">用 spark进行数据挖掘</h3>
+                <details>
+                    <summary>点击解锁</summary>
+                    <div>
+                        <ul>
+                            <li>使用 <b>Spark</b> 用于分析印度地区的平均气温(TAVG measurements)</li>
+                            <li>使用了 <b>Spark Dataframe</b> 和 <b>interactive plotting</b>.
+                            </li>
+                            <div class="sub-class4">
+                                <div class="sub-class41">
+                                    <img src="interactive-plotting.png" alt="interactive plotting"
+                                        class="centered-image4" />
+                                    <img src="Map.png" alt="map of india with aggregation" class="centered-image4" />
+                                </div>
+                            </div>
+                            <li>链接
+                                <a
+                                    href="https://github.com/Mamioma/DS-analysis-with-spark/blob/master/DS%20analysis%20using%20spark.ipynb">jupeter
+                                    notebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+        </section>
+        <hr>
+        <section id="jobs">
+            <h2 class="h2">3.&nbsp;</h2>
+            <h2><em>工作过的地方</em></h2>
+            <aside>
+                <div class="tablelist">
+                    <button>
+                        <span>Adobe</span>
+                    </button>
+                    <button>
+                        <span>Amazon</span>
+                    </button>
+                    <button>
+                        <span>联想</span>
+                    </button>
+                </div>
+            </aside>
+            <div class="Job Description">
+                <nav id="Adobe-intro">
+                    <h3>
+                        <span>软件开发实习生</span>
+                        <span class="company"></span>
+                        &nbsp;
+                        <a href="https://www.adobe.com" class="company">@Adobe</a>
+                    </h3>
+                    <p>即将到来的实习 从 6月 - 9月 2023</p>
+                    <div>
+                        <ul>
+                            <li>即将发生...</li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="Job Description">
+                <nav id="Amazon-intro">
+                    <h3>
+                        <span>软件开发实习生</span>
+                        <span class="company"></span>
+                        &nbsp;
+                        <a href="https://www.amazon.com" class="company">@Amazon</a>
+                    </h3>
+                    <p>7月 - 9月 2022</p>
+                    <details>
+                        <summary>点击解锁</summary>
+                        <div>
+                            <ul>
+                                <li>开发了一个图像处理算法, 该算法将深度学习技术与Unsharp算法相结合,
+                                    达到了比平板电脑中使用的相机算法更低的锐度结果。并使用<b>MTF-50</b>评估了算法的性能。</li>
+                                <li>通过使用<b>adb</b>控制成像设备并在亚马逊实验室中生成不同锐化(sharpness)参数的图像，用于比较算法性能。</li>
+                                <li>开发了一个用户友好的模型，可以手动或自动控制锐度(sharpness)。</li>
+                                <li>在亚马逊实验室使用<b>Imatest</b>软件测试了包括<b>Sobel</b>、<b>Canny</b>算子和<b>Unsharp</b>算法在内的经典图像处理方法。
+                                </li>
+                                <li>文档链接
+                                    <a
+                                        href="https://docs.google.com/document/d/1S46jZ-8dckQsfOBhptATirIpfbZMtj-Tk_El2qUFwyQ/edit#heading=h.ngzwh9d293if">doc</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+                </nav>
+            </div>
+            <div class="Job Description">
+                <nav id="Lenovo-intro">
+                    <h3>
+                        <span>数据分析实习生</span>
+                        <span class="company"></span>
+                        &nbsp;
+                        <a href="https://www.lenovo.com" class="company">@联想</a>
+                    </h3>
+                    <p>11月 2021 - 2月 2022</p>
+                    <details>
+                        <summary>点击解锁</summary>
+                        <div class="image-container3">
+                            <ul>
+                                <li>利用联想的历史销售数据以及来自其他公司（如<b>IDC</b>和<b>GFK</b>）的数据，
+                                    进行<b>时间序列预测(time series forecast)</b>，预测联想笔记本产品和平板电脑的未来销售。</li>
+                                <li>通过实施<b>Prophet</b>等机器学习算法以及<b>LSTM</b>或<b>GRU</b>等深度学习模型，
+                                    将模型的预测准确度提高了<b>4.2%</b>。</li>
+                                <li>使用<b>Optuna</b>对项目的现有代码进行<b>超参数调整(hyperparameter adjustments)</b>,
+                                    与传统的<b>网格搜索(grid search)</b>方法相比，
+                                    节省了大量时间。</li>
+                            </ul>
+                            <div class="sub-class4">
+                                <div class="sub-class41">
+                                    <img src="hyperparameter.png" alt="problems of NAS" class="centered-image4" />
+                                    <img src="optuna.png" alt="Optuna" class="centered-image4" />
+                                </div>
+                                <div class="sub-class41">
+                                    <img src="importance.png" alt="Important parameter" class="centered-image4" />
+                                    <img src="search.png" alt="Important parameter" class="centered-image4" />
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </nav>
+            </div>
+        </section>
+    </div>
+    <h1 id="my-ins">my current ins</h1>
+
+    <blockquote class="instagram-media" data-instgrm-captioned
+        data-instgrm-permalink="https://www.instagram.com/p/CoJpDg9uosH/?utm_source=ig_embed&amp;utm_campaign=loading"
+        data-instgrm-version="14"
+        style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
+        <div style="padding:16px;"> <a
+                href="https://www.instagram.com/p/CoJpDg9uosH/?utm_source=ig_embed&amp;utm_campaign=loading"
+                style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;"
+                target="_blank">
+                <div style=" display: flex; flex-direction: row; align-items: center;">
+                    <div
+                        style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;">
+                    </div>
+                    <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;">
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;">
+                        </div>
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;">
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 19% 0;"></div>
+                <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px"
+                        viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg"
+                        xmlns:xlink="https://www.w3.org/1999/xlink">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g transform="translate(-511.000000, -20.000000)" fill="#000000">
+                                <g>
+                                    <path
+                                        d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg></div>
+                <div style="padding-top: 8px;">
+                    <div
+                        style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">
+                        View this post on Instagram</div>
+                </div>
+                <div style="padding: 12.5% 0;"></div>
+                <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;">
+                    <div>
+                        <div
+                            style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);">
+                        </div>
+                        <div
+                            style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;">
+                        </div>
+                        <div
+                            style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);">
+                        </div>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <div
+                            style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;">
+                        </div>
+                        <div
+                            style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)">
+                        </div>
+                    </div>
+                    <div style="margin-left: auto;">
+                        <div
+                            style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);">
+                        </div>
+                        <div
+                            style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);">
+                        </div>
+                        <div
+                            style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);">
+                        </div>
+                    </div>
+                </div>
+                <div
+                    style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;">
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;">
+                    </div>
+                    <div
+                        style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;">
+                    </div>
+                </div>
+            </a>
+            <p
+                style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">
+                <a href="https://www.instagram.com/p/CoJpDg9uosH/?utm_source=ig_embed&amp;utm_campaign=loading"
+                    style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;"
+                    target="_blank">A post shared by Mamio (@mamio_johnson) 仅支持美国地区使用</a>
+            </p>
+        </div>
+    </blockquote>
+    <script async src="//www.instagram.com/embed.js"></script>
+
+    <footer>
+        <div class="footer">
+            设计和搭建的人
+            <span id="MyName">马鸣庸</span>.
+            同时支持在电脑和手机
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
